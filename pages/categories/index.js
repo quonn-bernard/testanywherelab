@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import CategoryList from "../components/CategoriesList/CategoriesList";
-import store from "../components/store";
-import { fetchServicesData } from "../components/store/appDataActions";
-import ListSearch from "../utils/ListSearch";
+import CategoryList from "../../components/CategoriesList/CategoriesList";
+import store from "../../components/store";
+import { fetchServicesData } from "../../components/store/appDataActions";
+import ListSearch from "../../utils/ListSearch";
+import SearchForm from "../../components/SearchForm";
 
 const HomePage = ({ categories }) => {
   const [categoryList, setCategoryList] = useState([]);
@@ -14,6 +15,7 @@ const HomePage = ({ categories }) => {
   const handleChange = (e) => {
     setCategoryList(ListSearch(e, categories));
   };
+
   return (
     <>
       <form>

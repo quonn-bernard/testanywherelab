@@ -1,6 +1,6 @@
 import ListSearch from "../utils/ListSearch";
 
-const SearchForm = (props) => {
+const useSearchForm = (props) => {
   const handleChange = (input) => {
     setCategoryList(ListSearch(input, props.payload));
   };
@@ -11,9 +11,10 @@ const SearchForm = (props) => {
         onChange={(e) => {
           handleChange(e);
         }}
+        placeholder={props.placeholder}
       />
     </form>
   );
 };
 
-export default SearchForm;
+export default useSearchForm;

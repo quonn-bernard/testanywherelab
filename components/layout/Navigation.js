@@ -36,30 +36,23 @@ const MenuItems = ({ children }) => (
 
 const Navigation = (props) => {
 
-//   const { appData } = useServicesData("categories");
-
-//   const { dark, light, neutral } = useCustomTheme();
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
   const { colorMode } = useColorMode();
-//   const menuItemColor = useColorModeValue(light, light);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-// const menuItemBgColor = useColorModeValue(dark, neutral)
   return (
-    <Box
-    //   bg={useColorModeValue(neutral, dark)}
-    //   color={useColorModeValue(dark, neutral)}
-      borderBottom={`.5px solid rgba(0,0,0,1)`}
-    >
-      {/* <TopHeader /> */}
-      <Container maxW="container.xl">
+   
         <Flex
           as="nav"
           align="center"
           justify="space-between"
           wrap="wrap"
-          padding="1rem 0"
+          w="100%"
+          maxW="auto"
+          p="0"
+          m="0"
+          borderBottom={"1px solid black"}
         >
           <Text fontSize={{ base: "lg", md: "2xl" }} mr={5}>
             <Link href="/">TESTANYWHERE</Link>
@@ -67,7 +60,6 @@ const Navigation = (props) => {
           <HStack>
             <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
               <svg
-                // fill={light}
                 width="25px"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -185,8 +177,7 @@ const Navigation = (props) => {
             </HStack>
           </Box>
         </Flex>
-      </Container>
-    </Box>
+    
   );
 };
 

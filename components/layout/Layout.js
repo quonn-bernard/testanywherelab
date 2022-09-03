@@ -1,11 +1,11 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Grid, GridItem } from "@chakra-ui/react";
 import Navigation from "./Navigation";
 
 const Layout = (props) => {
   return (
-    <Container>
+    <Container maxW="100%" w="100%" m="0" p="0">
       <Navigation />
-      <main>{props.children}</main>
+      <main >{props.children}</main>
     </Container>
   );
 };

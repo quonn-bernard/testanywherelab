@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   useDisclosure,
   Button,
@@ -12,10 +12,31 @@ import {
   DrawerFooter,
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
+import store from "./store";
+import ListSearch from "../utils/ListSearch";
+import { fetchServicesData } from "./store/appDataActions";
+import { useSelector, useDispatch } from "react-redux";
+import ServicesList from "./ServicesList/ServicesList";
 
-function DrawerExample() {
+function GlobalSearch() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    dispatch(fetchServicesData());
+    setServices([])
+  }, []);
+
+  const handleChange = (e) => {
+    if(e.target.value.length > 0){
+      setServices(ListSearch(e, state.appData.services))
+    }else{
+      setServices(ListSearch(e, []))
+    }
+  };
 
   return (
     <>
@@ -24,7 +45,7 @@ function DrawerExample() {
         onClick={onOpen}
         background="black"
         color={"white"}
-        _hover={{ background: "teal"}}
+        _hover={{ background: "teal" }}
         p="0"
       >
         <BsSearch />
@@ -38,22 +59,19 @@ function DrawerExample() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Search out Lab Tests</DrawerHeader>
+          <DrawerHeader>Search Lab Tests</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Enter test name or code..." />
+            <Input
+              onChange={(e) => handleChange(e)}
+              placeholder="Enter test name or code..."
+            />
+            <ServicesList services={services} />
           </DrawerBody>
-
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>
   );
 }
 
-export default DrawerExample;
+export default GlobalSearch;

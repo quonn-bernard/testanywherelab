@@ -52,7 +52,7 @@ const Navigation = (props) => {
       p="1rem"
       m="0"
       borderBottom={"1px solid black"}
-      background={"#fff"}
+      h="7.5vh"
     >
       <Text fontSize={{ base: "lg", md: "2xl" }} mr={5}>
         <Link href="/">TESTANYWHERE</Link>

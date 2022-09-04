@@ -13,45 +13,15 @@ import {
 } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Heading, useMediaQuery, Box, HStack } from "@chakra-ui/react";
-// import Carousel from "framer-motion-carousel";
-import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
 
 const HomePage = ({ categories }) => {
   const [categoryList, setCategoryList] = useState([]);
-  const colors = ["#f90", "#ef0", "#e0f"];
-  const carousel = useRef();
-  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     setCategoryList(categories);
   }, []);
 
-  //   useEffect(() => {
-  //     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  //   }, []);
-
-  const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
-
-  const determineItemWidth = () => {
-    if (isLargerThanHD) {
-      return "25%";
-    } else {
-      return "70%";
-    }
-  };
-
-  const determineItemMArgin = () => {
-    if (isLargerThanHD) {
-      return ".6% 1.95% .6% .05%";
-    } else {
-      return "0 1.25% .6% 1.25%";
-    }
-  };
-
-  const handleChange = (e) => {
-    setCategoryList(ListSearch(e, categories));
-  };
   return (
     <>
       <Container
@@ -107,54 +77,8 @@ const HomePage = ({ categories }) => {
         </Flex>
       </Container>
       <HStack>
-        <Carousel categories={categories} />
+        <Carousel categories={categoryList} />
       </HStack>
-
-      {/* <form>
-        <input
-          type="text"
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />
-      </form>
-      <CategoryListSideBar />
-      <CategoryList categories={categoryList} /> */}
-      {/* <SimpleGrid
-        minChildWidth="300px"
-        h="200px"
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(5, 1fr)"
-        gap={4}
-      >
-        <GridItem rowSpan={2} colSpan={1}>
-          {" "}
-          <CategoryListSideBar />
-        </GridItem>
-        <GridItem colSpan={4} bg="tomato" />
-        <GridItem colSpan={4} bg="tomato" />
-      </SimpleGrid> */}
-      {/* <SimpleGrid columns={[1, 1, 2, 2]} spacing="40px">
-        <Box bg="tomato" height="80px"></Box>
-        <GridItem colSpan={4} bg="tomato" />
-        <GridItem colSpan={4} bg="tomato" />
-      </SimpleGrid> */}
-
-      {/* <Grid
-        h="100vh"
-        templateRows="repeat(2, 1fr)"
-        templateColumns={{ base: "100%", lg: "repeat(5, 1fr)" }}
-      >
-        <GridItem
-          order={{ base: 2, lg: 2 }}
-          rowSpan={1}
-          colSpan={1}
-          borderRight={"1px solid red"}
-        >
-          <CategoryListSideBar />
-        </GridItem>
-        <GridItem order={{ base: 1, lg: 2 }} colSpan={4} />
-      </Grid> */}
     </>
   );
 };

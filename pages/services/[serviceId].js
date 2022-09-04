@@ -40,6 +40,7 @@ export async function getStaticPaths() {
       { params: { serviceId: "ptinr-clotting-test" } },
       { params: { serviceId: "hemoglobin-a1c" } },
       { params: { serviceId: "flu-test" } },
+      { params: { serviceId: "12-panel-drug-test" } },
     ],
     fallback: false, // can also be true or 'blocking'
   };

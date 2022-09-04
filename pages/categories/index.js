@@ -3,7 +3,7 @@ import CategoryList from "../../components/CategoriesList/CategoriesList";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
 import ListSearch from "../../utils/ListSearch";
-import SearchForm from "../../components/SearchForm";
+import SearchForm from "../../components/GlobalSearch";
 
 const HomePage = ({ categories }) => {
   const [categoryList, setCategoryList] = useState([]);

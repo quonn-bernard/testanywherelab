@@ -76,7 +76,7 @@ const HomePage = ({ categories }) => {
             md: "6rem 4rem 7rem",
             lg: "8rem 6rem 9rem",
           }}
-          h="60vh"
+          h={{base: "auto", lg: "60vh"}}
         >
           <VStack
             w={{ base: "100vh", sm: "85vh", lg: "65vh" }}

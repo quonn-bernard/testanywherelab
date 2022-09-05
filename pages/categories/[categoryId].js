@@ -2,12 +2,26 @@ import { useRouter, useEffect } from "next/Router";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
 import Link from "next/link";
+import { Container, Text, Flex, Heading } from "@chakra-ui/react";
 
-const CategoryPage = ({ serviceData }) => {
-  const router = useRouter();
-
+const CategoryPage = ({ serviceData, slug }) => {
   return (
-    <h1>
+    <>
+      <Container
+        h="400px"
+        w="100%"
+        maxW="100%"
+        backgroundImage={
+          "linear-gradient(to right bottom, rgba(0, 170, 166, .9), rgba(0, 170, 166, .95)),url(https://res.cloudinary.com/dowmtolou/image/upload/v1662338295/national-cancer-institute-egT3xtDu9DQ-unsplash_fvi63b-e_grayscale_zvtxcj.jpg)"
+        }
+        backgroundSize={"cover"}
+        backgroundPosition={"center center"}
+      >
+        <Flex justify={"center"} alignItems={"center"} h="100%">
+          <Heading>{slug} Tests</Heading>
+        </Flex>
+      </Container>
+
       {serviceData.map((cat, index) => {
         return (
           <Link
@@ -16,14 +30,13 @@ const CategoryPage = ({ serviceData }) => {
               pathname: "/services/[slug]",
               query: { slug: cat.slug },
             }}
-            // href={`services/${cat.slug}`}
             replace
           >
-            <p>{cat.slug}</p>
+            <p>{cat.name}</p>
           </Link>
         );
       })}
-    </h1>
+    </>
   );
 };
 
@@ -68,6 +81,7 @@ export async function getStaticProps({ params }) {
       serviceData: svcData,
       catkey: catKey,
       name: catKey[0].name,
+      slug: params.categoryId,
     },
   };
 }

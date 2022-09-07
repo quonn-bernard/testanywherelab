@@ -17,6 +17,7 @@ export async function getStaticPaths() {
     paths: [
       { params: { serviceId: "covid-19-rapid-test-pcr" } },
       { params: { serviceId: "covid-19-rapid-antigen-test" } },
+      { params: { serviceId: "covid-19-vaccination" } },
       { params: { serviceId: "thyroid-stimulating-hormone-test" } },
       { params: { serviceId: "rapid-glucose-test" } },
       { params: { serviceId: "pregnancy-test" } },

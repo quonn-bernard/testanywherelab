@@ -1,8 +1,5 @@
-import React from "react";
-// import useCustomTheme from "../Hooks/useCustomTheme";
-// import DefaultButton from "../Buttons/DefaultButton";
+import React, { useEffect } from "react";
 import Link from "next/link";
-
 import {
   Box,
   HStack,
@@ -20,14 +17,8 @@ import {
   useDisclosure,
   PopoverAnchor,
 } from "@chakra-ui/react";
-import { BsSearch } from "react-icons/bs";
 import DrawerExample from "../GlobalSearch";
-// import DarkModeSwitch from "../DarkModeSwitch";
-// import TopHeader from "./TopHeader";
-// import BrandLogo from "../BrandLogo";
-// import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-// import useServicesData from "../Hooks/useServicesData";
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -41,6 +32,8 @@ const Navigation = (props) => {
   const { colorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+
+
   return (
     <Flex
       as="nav"
@@ -52,15 +45,14 @@ const Navigation = (props) => {
       p="1rem"
       m="0"
       borderBottom={"1px solid black"}
-    //   h="7.5vh"
     >
       <Text fontSize={{ base: "lg", md: "2xl" }} mr={5}>
         <Link href="/">TESTANYWHERE</Link>
       </Text>
       <HStack>
-      <Show below="md">
-            <DrawerExample />
-          </Show>
+        <Show below="md">
+          <DrawerExample />
+        </Show>
         <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
           <svg
             width="25px"
@@ -82,7 +74,6 @@ const Navigation = (props) => {
         fontWeight={600}
       >
         <Menu alignItems="center" fontWeight={600} isOpen={isOpen}>
-        
           <MenuButton
             borderRadius="md"
             borderWidth="0"
@@ -103,25 +94,40 @@ const Navigation = (props) => {
             onMouseLeave={onClose}
           >
             <MenuItem
-            //   _hover={{
-            //     // color: menuItemColor,
-            //     // background: useColorModeValue(dark, neutral),
-            //   }}
             >
               <Link href="/services">ALL SERVICES</Link>
             </MenuItem>
-
-            {/* {appData.map((cat, index) => {
-                  return (<MenuItem
-                  key={index}
-                  _hover={{
-                    color: menuItemColor,
-                    background: menuItemBgColor,
-                  }}
-                >
-                   <Link href={`/categories/${cat.slug}/`}>{cat.name}</Link>
-                </MenuItem>)
-                })} */}
+            <MenuItem>
+              <Link href="/categories/routine-labs">Routine Labs</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/infectious-disease">
+                infectious Disease
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/diabetes-screening">Diabetes Screen</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/clotting-screening">Clotting Screen</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/urine-based-testing">
+                Urine Based Tests
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/job-onboarding">Job Onboarding</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/womens-health">Womens' Health</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/immunizations">Immunizations</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/categories/test-bundles">Test Bundles</Link>
+            </MenuItem>
           </MenuList>
         </Menu>
         <Text
@@ -163,7 +169,7 @@ const Navigation = (props) => {
             //   background: useColorModeValue(light, neutral),
             //   color: useColorModeValue(neutral, dark),
             // }}
-            variant='link'
+            variant="link"
           >
             CREATE ACCOUNT
           </Button>

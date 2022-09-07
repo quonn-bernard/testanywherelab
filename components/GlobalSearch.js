@@ -10,6 +10,7 @@ import {
   DrawerBody,
   Input,
   DrawerFooter,
+  Text
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import store from "./store";
@@ -46,9 +47,8 @@ function GlobalSearch() {
         background="black"
         color={"white"}
         _hover={{ background: "teal" }}
-        p="0"
       >
-        <BsSearch />
+        <BsSearch /> <Text ml={3}>SEARCH LAB TESTS</Text>
       </Button>
       <Drawer
         isOpen={isOpen}

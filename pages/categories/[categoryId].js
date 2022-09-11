@@ -26,7 +26,6 @@ const CategoryPage = ({ serviceData, slug, categories, services }) => {
       return "70%";
     }
   };
-  console.log(services);
 
   return (
     <>
@@ -49,7 +48,12 @@ const CategoryPage = ({ serviceData, slug, categories, services }) => {
         maxW={{ base: "85%", md: "65%", lg: "80%" }}
         padding={"4rem 0"}
       >
-        <Flex px={{base: "1rem",  lg: "5rem", xl: "10rem"}} pb={"6rem"} pt={"2rem"} w="100%">
+        <Flex
+          px={{ base: "1rem", lg: "5rem", xl: "10rem" }}
+          pb={"6rem"}
+          pt={"2rem"}
+          w="100%"
+        >
           <Text fontSize={"25px"} textAlign="center">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -88,9 +92,8 @@ const CategoryPage = ({ serviceData, slug, categories, services }) => {
               <GiTransparentTubes fontSize={20} />
               <Text
                 as={"p"}
-                fontSize={"x-large"}
+                fontSize={{ base: "16px" }}
                 mt={0}
-                pt={0}
                 fontWeight={700}
                 letterSpacing={2}
               >
@@ -164,7 +167,7 @@ export async function getStaticPaths() {
       { params: { categoryId: "immunizations" } },
       { params: { categoryId: "test-bundles" } },
     ],
-    fallback: false, // can also be true or 'blocking'
+    fallback: false, 
   };
 }
 

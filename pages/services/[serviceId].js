@@ -14,15 +14,19 @@ import {
   ListItem,
   Divider,
   Button,
+  VStack
 } from "@chakra-ui/react";
 import { GiTransparentTubes } from "react-icons/gi";
 import { IoIosCalendar } from "react-icons/io";
 import Link from "next/link";
 import GlobalSearch from "../../components/GlobalSearch";
+import { useRouter } from "next/router";
+import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
 
 const servicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
+  const router = useRouter()
 
   const getItemId = () => {
     return Math.random().toString();
@@ -135,9 +139,7 @@ const servicePage = ({ serviceData, categories }) => {
           </GridItem>
         </Grid>
       </Container>
-      <Container w="100%" maxW="100%" bg="red.500">
-        hhhuuhhu
-      </Container>
+      <AllServicesPageSection />
     </>
   );
 };

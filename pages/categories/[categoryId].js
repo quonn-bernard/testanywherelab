@@ -16,7 +16,7 @@ import { GiTransparentTubes } from "react-icons/gi";
 import { CategoryList } from "../../components/CategoriesList/CategoriesList";
 import GlobalSearch from "../../components/GlobalSearch";
 
-const CategoryPage = ({ serviceData, slug, categories, services }) => {
+const CategoryPage = ({ serviceData, slug, categories, name }) => {
   const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
 
   const determineItemWidth = () => {
@@ -40,7 +40,7 @@ const CategoryPage = ({ serviceData, slug, categories, services }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{slug} Tests</Heading>
+          <Heading>{name} Tests</Heading>
         </Flex>
       </Container>
       <Container

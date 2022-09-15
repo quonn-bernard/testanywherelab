@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/Router";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
 import {
@@ -11,7 +10,6 @@ import {
   HStack,
   Text,
   Box,
-  useMediaQuery,
   UnorderedList,
   ListItem,
   Divider,
@@ -24,7 +22,6 @@ import GlobalSearch from "../../components/GlobalSearch";
 
 const servicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
-  const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
 
   const getItemId = () => {
@@ -111,9 +108,11 @@ const servicePage = ({ serviceData, categories }) => {
           </GridItem>
           <GridItem order={{ base: 1, lg: 2 }}>
             <Box mb={10}>
-              <Button w={{base: "100%", lg: "33vh"}} size='lg'>
+              <Button w={{ base: "100%", lg: "33vh" }} size="lg">
                 <IoIosCalendar fontSize={"1.5rem"} />
-                <Text fontSize={"1.25rem"} ml={3}>MAKE AN APPOINTMENT</Text>
+                <Text fontSize={"1.25rem"} ml={3}>
+                  MAKE AN APPOINTMENT
+                </Text>
               </Button>
             </Box>
             <Box mt={5} mb={10} fontSize={"lg"}>
@@ -133,9 +132,11 @@ const servicePage = ({ serviceData, categories }) => {
                   );
                 })}
             </UnorderedList>
-            <Divider />
           </GridItem>
         </Grid>
+      </Container>
+      <Container w="100%" maxW="100%" bg="red.500">
+        hhhuuhhu
       </Container>
     </>
   );

@@ -19,14 +19,4 @@ app.get("/api", (req, res) => {
     })
 });
 
-app.put("/api/put", (req, res) => {
-    console.log('put')
-    axios.put("https://expenses-f1139-default-rtdb.firebaseio.com/expenseList.json", req.body).then(response => {
-        res.json(response.data)
-        console.log(response.data)
-    }).catch(error => {
-        res.json(error)
-    })
-});
-
 app.listen(port);

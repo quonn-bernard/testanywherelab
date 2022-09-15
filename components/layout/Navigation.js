@@ -6,16 +6,13 @@ import {
   Flex,
   Text,
   Button,
-  useColorModeValue,
   useColorMode,
-  Container,
   Show,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
   useDisclosure,
-  PopoverAnchor,
 } from "@chakra-ui/react";
 import DrawerExample from "../GlobalSearch";
 import { useRouter } from "next/router";
@@ -77,9 +74,7 @@ const Navigation = (props) => {
           <MenuButton
             borderRadius="md"
             borderWidth="0"
-            // background={useColorModeValue(neutral, dark)}
             _hover={{}}
-            // color={useColorModeValue(dark, neutral)}
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
             mr={5}
@@ -88,15 +83,9 @@ const Navigation = (props) => {
             <Link href="/services">SERVICES</Link>
           </MenuButton>
           <MenuList
-            // background={useColorModeValue(dark, neutral)}
-            // color={useColorModeValue(neutral, dark)}
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
           >
-            <MenuItem
-            >
-              <Link href="/services">ALL SERVICES</Link>
-            </MenuItem>
             <MenuItem>
               <Link href="/categories/routine-labs">Routine Labs</Link>
             </MenuItem>
@@ -131,17 +120,11 @@ const Navigation = (props) => {
           </MenuList>
         </Menu>
         <Text
-          //   _hover={{
-          //     color: menuItemColor,
-          //   }}
           mr={5}
         >
           <Link href="/about">ABOUT </Link>
         </Text>
         <Text
-          //   _hover={{
-          //     color: menuItemColor,
-          //   }}
           mr={5}
         >
           <Link href="/contact">CONTACT US</Link>
@@ -161,14 +144,7 @@ const Navigation = (props) => {
             <DrawerExample />
           </Show>
           <Button
-            // bg={useColorModeValue(dark, light)}
-            // color={useColorModeValue(neutral, neutral)}
             rounded={"full"}
-            // borderColor={useColorModeValue(light, neutral)}
-            // _hover={{
-            //   background: useColorModeValue(light, neutral),
-            //   color: useColorModeValue(neutral, dark),
-            // }}
             variant="link"
           >
             CREATE ACCOUNT

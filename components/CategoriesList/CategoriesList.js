@@ -6,7 +6,7 @@ const CategoryList = (props) => {
     <List>
       {props.categories.map((category, index) => {
         return (
-          <ListItem key={index}>
+          <ListItem key={Math.random().toString()}>
             <Link href={`/categories/${category.slug}`}>{category.name}</Link>
           </ListItem>
         );

@@ -3,7 +3,6 @@ import CategoryList from "../../components/CategoriesList/CategoriesList";
 import ServicesList from "../../components/ServicesList/ServicesList";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
-import ListSearch from "../../utils/ListSearch";
 
 const ServicePage = ({ services }) => {
   const [serviceList, setServiceList] = useState([]);
@@ -12,21 +11,8 @@ const ServicePage = ({ services }) => {
     setServiceList(services);
   }, []);
 
-  const handleChange = (e) => {
-    setServiceList(ListSearch(e, services));
-  };
-
   return (
     <>
-      <form>
-        <input
-          type="text"
-          onChange={(e) => {
-            handleChange(e);
-          }}
-          placeholder="Search Lab Services"
-        />
-      </form>
       <ServicesList services={serviceList} />
     </>
   );

@@ -3,7 +3,6 @@ import CategoryList from "../../components/CategoriesList/CategoriesList";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
 import ListSearch from "../../utils/ListSearch";
-import SearchForm from "../../components/SearchForm";
 
 const HomePage = ({ categories }) => {
   const [categoryList, setCategoryList] = useState([]);
@@ -18,14 +17,6 @@ const HomePage = ({ categories }) => {
 
   return (
     <>
-      <form>
-        <input
-          type="text"
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />
-      </form>
       <CategoryList categories={categoryList} />
     </>
   );

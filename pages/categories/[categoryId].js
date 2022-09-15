@@ -1,4 +1,4 @@
-import { useRouter, useEffect } from "next/Router";
+import { useEffect } from "next/Router";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
 import Link from "next/link";
@@ -10,15 +10,18 @@ import {
   Box,
   Grid,
   GridItem,
+  Button,
 } from "@chakra-ui/react";
 import { useMediaQuery, HStack } from "@chakra-ui/react";
 import { GiTransparentTubes } from "react-icons/gi";
 import { CategoryList } from "../../components/CategoriesList/CategoriesList";
 import GlobalSearch from "../../components/GlobalSearch";
+import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
+import { useRouter } from "next/Router";
 
 const CategoryPage = ({ serviceData, slug, categories, name }) => {
   const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
-
+  const router = useRouter();
   const determineItemWidth = () => {
     if (isLargerThanHD) {
       return "25%";
@@ -114,22 +117,24 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
             <GlobalSearch />
           </GridItem>
           <GridItem order={{ base: 1, lg: 2 }}>
-            <Grid gap={10}>
+            <Grid gap={2}>
               {serviceData.map((cat) => {
                 return (
                   <GridItem
                     key={Math.random().toString()}
                     border={"1px solid white"}
+                    borderTopWidth={0}
+                    borderRightWidth={0}
+                    borderLeftWidth={0}
                     w="100%"
-                    h="200"
-                    borderRadius={5}
-                    padding="1rem"
-                    backgroundImage={`linear-gradient(to right bottom, rgba(0, 170, 166, 1), rgba(255, 255, 255, .925) ),url(${cat.bg})`}
+                    padding="1rem 0"
                     backgroundSize={"cover"}
                     backgroundPosition={"center center"}
                     minWidth={determineItemWidth()}
+                    display={"flex"}
+                    mb={5}
                   >
-                    <HStack>
+                    <HStack justifyContent={"space-between"} w={"100%"}>
                       <Link
                         key={Math.random().toString()}
                         href={{
@@ -138,10 +143,19 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
                         }}
                         replace
                       >
-                        <Text fontSize={"xl"} fontWeight={700}>
+                        <Text
+                          fontSize={{ base: "1rem", lg: "1.75rem" }}
+                          fontWeight={700}
+                        >
                           {cat.name}
                         </Text>
                       </Link>
+                      <Button
+                        onClick={() => router.push(`/services/${cat.slug}`)}
+                        replace
+                      >
+                        Learn More
+                      </Button>
                     </HStack>
                   </GridItem>
                 );
@@ -150,6 +164,7 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
           </GridItem>
         </Grid>
       </Container>
+      <AllServicesPageSection />
     </>
   );
 };
@@ -167,7 +182,7 @@ export async function getStaticPaths() {
       { params: { categoryId: "immunizations" } },
       { params: { categoryId: "test-bundles" } },
     ],
-    fallback: false, 
+    fallback: false,
   };
 }
 

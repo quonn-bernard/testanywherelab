@@ -3,6 +3,7 @@ import CategoryList from "../../components/CategoriesList/CategoriesList";
 import ServicesList from "../../components/ServicesList/ServicesList";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
+import { Grid } from "@chakra-ui/react";
 
 const ServicePage = ({ services }) => {
   const [serviceList, setServiceList] = useState([]);

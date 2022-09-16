@@ -18,6 +18,8 @@ import { CategoryList } from "../../components/CategoriesList/CategoriesList";
 import GlobalSearch from "../../components/GlobalSearch";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
 import { useRouter } from "next/Router";
+import PageContentLayoutGrid from "../../components/layout/AllServicesPageSection";
+import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 
 const CategoryPage = ({ serviceData, slug, categories, name }) => {
   const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
@@ -120,44 +122,7 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
             <Grid gap={2}>
               {serviceData.map((cat) => {
                 return (
-                  <GridItem
-                    key={Math.random().toString()}
-                    border={"1px solid white"}
-                    borderTopWidth={0}
-                    borderRightWidth={0}
-                    borderLeftWidth={0}
-                    w="100%"
-                    padding="1rem 0"
-                    backgroundSize={"cover"}
-                    backgroundPosition={"center center"}
-                    minWidth={determineItemWidth()}
-                    display={"flex"}
-                    mb={5}
-                  >
-                    <HStack justifyContent={"space-between"} w={"100%"}>
-                      <Link
-                        key={Math.random().toString()}
-                        href={{
-                          pathname: "/services/[slug]",
-                          query: { slug: cat.slug },
-                        }}
-                        replace
-                      >
-                        <Text
-                          fontSize={{ base: "1rem", lg: "1.75rem" }}
-                          fontWeight={700}
-                        >
-                          {cat.name}
-                        </Text>
-                      </Link>
-                      <Button
-                        onClick={() => router.push(`/services/${cat.slug}`)}
-                        replace
-                      >
-                        Learn More
-                      </Button>
-                    </HStack>
-                  </GridItem>
+                  <ServicesListItem service={cat} />
                 );
               })}
             </Grid>

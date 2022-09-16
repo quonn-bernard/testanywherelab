@@ -22,6 +22,7 @@ import Link from "next/link";
 import GlobalSearch from "../../components/GlobalSearch";
 import { useRouter } from "next/router";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
+import SideBarCategories from "../../components/SideBarCategories";
 
 const servicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
@@ -60,56 +61,7 @@ const servicePage = ({ serviceData, categories }) => {
           templateColumns={{ base: "100%", lg: "25% auto" }}
           gap={{ base: 16, lg: 20 }}
         >
-          <GridItem
-            order={{ base: 2, lg: 1 }}
-            border={"1px solid white"}
-            borderRadius={10}
-            px={8}
-            color="black"
-            bg="white"
-            justifyContent="center"
-            alignItems="center"
-            height={475}
-            display={"flex"}
-            flexDir={"column"}
-          >
-            <HStack
-              mb={5}
-              w={"100%"}
-              border={"1px solid black"}
-              justifyContent="center"
-              bg="black"
-              color="white"
-              p={3}
-            >
-              <GiTransparentTubes fontSize={20} />
-              <Text
-                as={"p"}
-                fontSize={{ base: "16px" }}
-                mt={0}
-                fontWeight={700}
-                letterSpacing={2}
-              >
-                LAB CATEGORIES
-              </Text>
-            </HStack>
-            <Box mb={10}>
-              {categories.map((cat) => {
-                return (
-                  <Link
-                    key={Math.random().toString()}
-                    href={`/categories/${cat.slug}`}
-                    replace
-                  >
-                    <Text as="p" fontSize={"xl"}>
-                      {cat.name}
-                    </Text>
-                  </Link>
-                );
-              })}
-            </Box>
-            <GlobalSearch text="SEARCH OUR TESTS" />
-          </GridItem>
+          <SideBarCategories categories={categories} />
           <GridItem order={{ base: 1, lg: 2 }}>
             <Box mb={10}>
               <Button w={{ base: "100%", lg: "33vh" }} size="lg">

@@ -9,11 +9,9 @@ import {
   DrawerHeader,
   DrawerBody,
   Input,
-  DrawerFooter,
   Text,
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
-import store from "./store";
 import ListSearch from "../utils/ListSearch";
 import { fetchServicesData } from "./store/appDataActions";
 import { useSelector, useDispatch } from "react-redux";

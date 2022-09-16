@@ -116,7 +116,7 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
                 );
               })}
             </Box>
-            <GlobalSearch />
+            <GlobalSearch text="SEARCH OUR TESTS" />
           </GridItem>
           <GridItem order={{ base: 1, lg: 2 }}>
             <Grid gap={2}>

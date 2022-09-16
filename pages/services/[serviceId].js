@@ -108,7 +108,7 @@ const servicePage = ({ serviceData, categories }) => {
                 );
               })}
             </Box>
-            <GlobalSearch />
+            <GlobalSearch text="SEARCH OUR TESTS" />
           </GridItem>
           <GridItem order={{ base: 1, lg: 2 }}>
             <Box mb={10}>

@@ -10,7 +10,7 @@ import {
   DrawerBody,
   Input,
   DrawerFooter,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import store from "./store";
@@ -19,7 +19,7 @@ import { fetchServicesData } from "./store/appDataActions";
 import { useSelector, useDispatch } from "react-redux";
 import ServicesList from "./ServicesList/ServicesList";
 
-function GlobalSearch({text=''}) {
+function GlobalSearch({ text = null }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const dispatch = useDispatch();
@@ -28,14 +28,14 @@ function GlobalSearch({text=''}) {
 
   useEffect(() => {
     dispatch(fetchServicesData());
-    setServices([])
+    setServices([]);
   }, []);
 
   const handleChange = (e) => {
-    if(e.target.value.length > 0){
-      setServices(ListSearch(e, state.appData.services))
-    }else{
-      setServices(ListSearch(e, []))
+    if (e.target.value.length > 0) {
+      setServices(ListSearch(e, state.appData.services));
+    } else {
+      setServices(ListSearch(e, []));
     }
   };
 
@@ -48,7 +48,8 @@ function GlobalSearch({text=''}) {
         color={"white"}
         _hover={{ background: "teal" }}
       >
-        <BsSearch /> 
+        <BsSearch />
+        {text ? <Text ml={3}>{text}</Text> : null}
       </Button>
       <Drawer
         isOpen={isOpen}

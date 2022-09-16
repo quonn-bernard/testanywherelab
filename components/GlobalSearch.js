@@ -19,7 +19,7 @@ import { fetchServicesData } from "./store/appDataActions";
 import { useSelector, useDispatch } from "react-redux";
 import ServicesList from "./ServicesList/ServicesList";
 
-function GlobalSearch() {
+function GlobalSearch({text=''}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const dispatch = useDispatch();
@@ -48,7 +48,7 @@ function GlobalSearch() {
         color={"white"}
         _hover={{ background: "teal" }}
       >
-        <BsSearch /> <Text ml={3}>SEARCH LAB TESTS</Text>
+        <BsSearch /> 
       </Button>
       <Drawer
         isOpen={isOpen}

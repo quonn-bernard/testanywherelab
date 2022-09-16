@@ -6,7 +6,6 @@ import {
   Flex,
   Text,
   Button,
-  useColorMode,
   Show,
   Menu,
   MenuButton,
@@ -14,8 +13,7 @@ import {
   MenuList,
   useDisclosure,
 } from "@chakra-ui/react";
-import DrawerExample from "../GlobalSearch";
-import { useRouter } from "next/router";
+import GlobalSearch from "../GlobalSearch";
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -26,9 +24,7 @@ const MenuItems = ({ children }) => (
 const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
-  const { colorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const router = useRouter();
 
 
   return (
@@ -48,7 +44,7 @@ const Navigation = (props) => {
       </Text>
       <HStack>
         <Show below="md">
-          <DrawerExample />
+          <GlobalSearch />
         </Show>
         <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
           <svg
@@ -141,7 +137,7 @@ const Navigation = (props) => {
       >
         <HStack gap={3}>
           <Show above="md">
-            <DrawerExample />
+            <GlobalSearch />
           </Show>
           <Button
             rounded={"full"}

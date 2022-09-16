@@ -12,6 +12,7 @@ import {
   MenuItem,
   MenuList,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
 import GlobalSearch from "../GlobalSearch";
 
@@ -26,7 +27,6 @@ const Navigation = (props) => {
   const handleToggle = () => setShow(!show);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-
   return (
     <Flex
       as="nav"
@@ -40,7 +40,9 @@ const Navigation = (props) => {
       borderBottom={"1px solid black"}
     >
       <Text fontSize={{ base: "lg", md: "2xl" }} mr={5}>
-        <Link href="/">TESTANYWHERE</Link>
+        <Link href="/">
+          <Image w={{base: "50vw", lg: "20vw" }} src="https://res.cloudinary.com/dowmtolou/image/upload/v1663343219/Test_Anywhere_ig_logo_12_dz16wb.png" />
+        </Link>
       </Text>
       <HStack>
         <Show below="md">
@@ -78,10 +80,7 @@ const Navigation = (props) => {
           >
             <Link href="/services">SERVICES</Link>
           </MenuButton>
-          <MenuList
-            onMouseEnter={onOpen}
-            onMouseLeave={onClose}
-          >
+          <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
             <MenuItem>
               <Link href="/categories/routine-labs">Routine Labs</Link>
             </MenuItem>
@@ -115,14 +114,10 @@ const Navigation = (props) => {
             </MenuItem>
           </MenuList>
         </Menu>
-        <Text
-          mr={5}
-        >
+        <Text mr={5}>
           <Link href="/about">ABOUT </Link>
         </Text>
-        <Text
-          mr={5}
-        >
+        <Text mr={5}>
           <Link href="/contact">CONTACT US</Link>
         </Text>
       </Box>
@@ -139,10 +134,7 @@ const Navigation = (props) => {
           <Show above="md">
             <GlobalSearch />
           </Show>
-          <Button
-            rounded={"full"}
-            variant="link"
-          >
+          <Button rounded={"full"} variant="link">
             CREATE ACCOUNT
           </Button>
           <Show above="md">{/* <DarkModeSwitch /> */}</Show>

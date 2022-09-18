@@ -41,7 +41,7 @@ const Navigation = (props) => {
     >
       <Text fontSize={{ base: "lg", md: "2xl" }} mr={5}>
         <Link href="/">
-          <Image w={{base: "50vw", lg: "20vw" }} src="https://res.cloudinary.com/dowmtolou/image/upload/v1663343219/Test_Anywhere_ig_logo_12_dz16wb.png" />
+          <Image w={{base: "65vw", sm: "50vw", md: "35vw", lg: "20vw" }} src="https://res.cloudinary.com/dowmtolou/image/upload/v1663343219/Test_Anywhere_ig_logo_12_dz16wb.png" />
         </Link>
       </Text>
       <HStack>

@@ -14,6 +14,7 @@ import {
   useDisclosure,
   Container,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import GlobalSearch from "../GlobalSearch";
 import Logo from "../../public/logo.png";
@@ -27,6 +28,7 @@ const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
 
   return (
     <Container w="100%" maxW={{ base: "100%", md: "65%", lg: "80%" }}>
@@ -43,9 +45,9 @@ const Navigation = (props) => {
       >
         <HStack>
           <Flex h="100%" mr={{base: 0, lg: 10}}>
-            <Link href="/" border={"1px solid white"}>
-              <Image src={Logo} />
-            </Link>
+            {/* <Link href="/" border={"1px solid white"}> */}
+              <Image onClick={() => router.push(`/`)} src={Logo} />
+            {/* </Link> */}
           </Flex>
           <Show below="md">
             <GlobalSearch />
@@ -89,7 +91,7 @@ const Navigation = (props) => {
               </MenuItem>
               <MenuItem>
                 <Link href="/categories/infectious-disease">
-                  infectious Disease
+                  Infectious Disease
                 </Link>
               </MenuItem>
               <MenuItem>

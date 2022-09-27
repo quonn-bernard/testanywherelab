@@ -33,21 +33,13 @@ const ServicesListItem = (props) => {
       mb={5}
     >
       <HStack justifyContent={"space-between"} w={"100%"}>
-        <Link
-          key={Math.random().toString()}
-          href={{
-            pathname: "/services/[slug]",
-            query: { slug: props.service.slug },
-          }}
-          replace
-        >
+      
           <Text fontSize={{ base: "1rem", lg: "1.75rem" }} fontWeight={700}>
             {props.service.name}
           </Text>
-        </Link>
         <Button
           onClick={() => router.push(`/services/${props.service.slug}`)}
-          replace
+          replace="true"
         >
           Learn More
         </Button>

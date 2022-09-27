@@ -1,0 +1,563 @@
+{
+  "data": {
+    "categories": [
+      {
+        "id": "c1",
+        "name": "Routine Labs",
+        "slug": "routine-labs"
+      },
+      {
+        "id": "c2",
+        "name": "Infectious Disease",
+        "slug": "infectious-disease"
+      },
+      {
+        "id": "c3",
+        "name": "Diabetes Screen",
+        "slug": "diabetes-screening"
+      },
+      {
+        "id": "c4",
+        "name": "Clotting Screen",
+        "slug": "clotting-screening"
+      },
+      {
+        "id": "c5",
+        "name": "Urine Based Tests",
+        "slug": "urine-based-testing"
+      },
+      {
+        "id": "c6",
+        "name": "Job Onboarding",
+        "slug": "job-onboarding"
+      },
+      {
+        "id": "c7",
+        "name": "Womens' Health",
+        "slug": "womens-health"
+      },
+      {
+        "id": "c8",
+        "name": "Immunizations",
+        "slug": "immunizations"
+      },
+      {
+        "id": "c9",
+        "name": "Test Bundles",
+        "slug": "test-bundles"
+      }
+    ],
+    "services": [
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660140015/web_images_1_lk8k4v.png",
+        "bulletpoints": [
+          "Albumin - Albumin is a protein made by the liver. Measuring levels of albumin is helpful in diagnosing liver disease. An albumin test measures how well your liver is making the proteins that your body needs.",
+          "Alanine aminotransferase (ALT) - ALT is an enzyme found predominantly in the cells of the liver. When the liver is damaged, ALT rises.",
+          "Alkaline Phosphatase - In conditions affecting the liver, damaged liver cells release increased amounts of ALP into the blood.",
+          "Aspartate aminotransferase (AST) - AST is another liver enzyme that is useful in helping to diagnose liver diseases.  Unlike ALT, it can be elevated from other causes as well.",
+          "Blood urea nitrogen (BUN) - Urea nitrogen is a byproduct from the breakdown of food proteins. A normal BUN level is between 7 and 20. As kidney function decreases, the BUN level rises.",
+          "Calcium - Measuring calcium can help determine whether the kidneys are excreting the proper amount of calcium and can also help diagnose kidney stones.",
+          "Carbon dioxide (Bicarbonate) - Your kidneys and lungs balance the levels of carbon dioxide, bicarbonate, and carbonic acid in the blood. Carbon dioxide levels can be used to help diagnose kidney disease.",
+          "Chloride - Chloride is an electrolyte. An increased level of blood chloride may indicate kidney disease.",
+          "Creatinine with estimated GFR - A waste product that comes from the normal wear and tear on muscles of the body. This test is a measure of how well the kidneys are removing wastes and excess fluid from the blood. The normal value for GFR is 90 or above, but may decrease with age. A GFR below 60 is a sign that the kidneys are not working properly. A GFR below 15 indicates kidney failure.",
+          "Glucose - Also known as blood sugar, is the body's main source of energy, and is typically used by physicians to diagnose and monitor patients for prediabetes, diabetes (Type 1, Type 2, and gestational), hyperglycemia, and hypoglycemia.",
+          "Potassium - Potassium is an electrolyte. High blood potassium can occur secondary to kidney disease.  Low blood potassium can happen with vomiting or diarrhea or the use of water pills.",
+          "Sodium - Sodium is an electrolyte. Abnormal levels of sodium help to determine if the kidneys are properly removing sodium from the body",
+          "Total bilirubin - This test measures direct and indirect levels of bilirubin to calculate a total bilirubin value.  Excess bilirubin, caused by obstruction or an inflamed liver, can lead to jaundice. Jaundice can cause your skin and the whites of your eyes to yellow.",
+          "Total protein - Total protein, the amount of protein in your blood, can help diagnose liver disease. The two main proteins found in the blood are globulins and albumin."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}, {"name": "Diabetes Screen", "slug": "diabetes-screen"}],
+        "id": "s0",
+        "monitors": "",
+        "name": "Comprehensive Metabolic Panel",
+        "price": 49,
+        "slug": "comprehensive-metabolic-panel",
+        "summary": "The comprehensive metabolic panel (CMP) measures blood sugar (glucose) levels, electrolyte and fluid balance, kidney function, and liver function.  The CMP is a snapshot of your overall health and its metabolism and chemical balance. It helps providers to diagnose certain conditions like diabetes, kidney disease, liver disease, hypertension. It’s often used for annual health exams.",
+        "tags": [
+          "Routine Labs",
+          "Diabetes Screen"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660140120/web_images_1_1_sfpase.png",
+        "bulletpoints": [
+          "Calcium - This test checks to make sure that your kidneys are producing the proper amount of calcium. Testing for calcium can sometimes help diagnose kidney stones.",
+          "Carbon Dioxide - The blood’s carbon dioxide levels are monitored and balanced by your lungs and kidneys. Looking at carbon dioxide levels can help to diagnose kidney disease.",
+          "Chloride - Chloride is one of the most important electrolytes in your blood. An increased level of blood chloride may indicate kidney disease or adrenal gland problems. Chloride helps to maintain your body’s proper blood volume and blood pressure. Most importantly, chloride keeps the ration of fluids inside and outside of your body’s cells at balance.",
+          "Creatinine to Bun Ratio (calculated) - The ratio of creatinine to BUN is usually between 10:1 and 20:1. A higher ratio may be caused by a condition that leads to a decrease in blood flow to the kidneys.",
+          "Glucose - A glucose test measures the amount of a certain kind of sugar (glucose)that's in your blood. High blood glucose levels can lead to damaged eyes, kidneys, blood vessels, and nerves.",
+          "Potassium - Potassium is both an electrolyte and a mineral. Potassium regulates the fluid ratio inside of your body and outside of your body. Potassium is a significant factor when it comes to keeping your nerves and muscles working. Kidney disease is the most common cause of high blood potassium.",
+          "Sodium - Sodium, like potassium, is also both an electrolyte and a mineral. Sodium is primarily located in the blood and lymph fluid. A hormone called aldosterone is created by adrenal glands to communicate with your kidneys and let them know how much sodium needs to be passed into the urine. When your sodium levels are low, it could mean heart failure.",
+          "Blood Urea Nitrogen (BUN) - Blood urea nitrogen is a byproduct of the breakdown of food proteins. Urea is created in the liver and passed out of your body through urine. A normal BUN level varies from 7 to 20. High BUN levels usually mean a decrease in kidney function."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}, {"name": "Diabetes Screen", "slug": "diabetes-screen"}],
+        "id": "s1",
+        "monitors": "BUN, Ca, Cl, CRE, GLU, K, Na",
+        "name": "Basic Metabolic Panel",
+        "price": 39,
+        "slug": "basic-metabolic-panel",
+        "summary": "Basic Metabolic Panel (BMP) measures your blood’s electrolyte and fluid balance, glucose levels, and your overall kidney function.",
+        "tags": [
+          "Routine Labs",
+          "Diabetes Screen"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362743/national-cancer-institute-eo_4DqPUSQA-unsplash_bo6kmb.jpg",
+        "bulletpoints": [
+          "Total Cholesterol: The total amount of cholesterol in your blood.",
+          "LDL “Bad Cholesterol”: Low-density lipoprotein cholesterol, this is known as bad cholesterol because it can lead to a hardening and clogging of your arteries.",
+          "HDL “Good cholesterol”: High-density lipoprotein cholesterol, this type of cholesterol helps to remove LDL from your blood.",
+          "Triglycerides: Unused calories are stored by the body as triglycerides in fat (lipid) cells."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s2",
+        "monitors": "CHOL, CHOL/HDL, nHDLc, HDL, LDL, TRIG, VLDL",
+        "name": "Lipid Panel",
+        "price": 29,
+        "slug": "lipid-panel",
+        "summary": "This panel is a snapshot of your overall cholesterol levels and triglycerides (the main components of natural fats and oils). Lipids are a type of fat and fat-like substances found in cells and are used as a source of energy like glucose. Cholesterol and triglycerides are the main things tested in this panel. Monitoring and maintaining proper cholesterol levels is important to your health because the extra cholesterol may be deposited on the walls of blood vessels as plaque, which can narrow or even block blood vessels and lead to heart disease or stroke.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362774/cdc-aHUMtDA4-28-unsplash_ttllvz.jpg",
+        "bulletpoints": [
+          "Alanine aminotransferase (ALT/SGPT) - ALT is an enzyme found predominantly in the cells of the liver. When the liver is damaged, ALT is released into the blood.",
+          "Aspartate aminotransferase (AST/SGOT) - AST is a liver enzyme that is useful in helping to diagnose liver diseases.",
+          "Total Cholesterol: The total amount of cholesterol in your blood.",
+          "LDL “Bad Cholesterol”: Low-density lipoprotein cholesterol, this is known as bad cholesterol because it can lead to a hardening and clogging of your arteries.",
+          "HDL “Good cholesterol”: High-density lipoprotein cholesterol, this type of cholesterol helps to remove LDL from your blood.",
+          "Triglycerides: Unused calories are stored by the body as triglycerides in fat (lipid) cells.",
+          "VLDL stands for very-low-density lipoprotein: Your liver makes VLDL and releases it into your bloodstream. The VLDL particles mainly carry triglycerides, another type of fat, to your tissues. VLDL is similar to LDL cholesterol, but LDL mainly carries cholesterol to your tissues instead of triglycerides."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s3",
+        "monitors": "ALT, AST, CHOL, CHOL/HDL, nHDLc, GLU, HDL, LDL, TRIG, VLDL",
+        "name": "Lipid Panel Plus",
+        "price": 49,
+        "slug": "lipid-panel-plus",
+        "summary": "This test provides an overall look at your cholesterol, triglycerides, glucose and a basic snapshot of your liver function. Lipids are a type of fat and fat-like substances found in cells and are used as a source of energy like glucose. Cholesterol and triglycerides are the main things tested in this panel. Monitoring and maintaining proper cholesterol levels is important to your health because the extra cholesterol may be deposited on the walls of blood vessels as plaque, which can narrow or even block blood vessels and lead to heart disease or stroke. The liver filters the blood coming from the digestive tract, before passing it along to the rest of the body. This organ also detoxifies chemicals and metabolizes drugs and secretes bile that ends up back in the intestines. The liver also makes proteins that are important for blood clotting and other functions.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362774/cdc-aHUMtDA4-28-unsplash_ttllvz.jpg",
+        "bulletpoints": [
+          "Alanine aminotransferase (ALT/SGPT) - ALT is an enzyme found predominantly in the cells of the liver. When the liver is damaged, ALT is released into the blood.",
+          "Albumin - Albumin is a protein made by the liver. Measuring levels of albumin is helpful in diagnosing liver disease. An albumin test measures how well your liver is making the proteins that your body needs.",
+          "Alkaline phosphatase (ALP) - In conditions affecting the liver, damaged liver cells release increased amounts of ALP into the blood.",
+          "Aspartate aminotransferase (AST/SGOT) - AST is a liver enzyme that is useful in helping to diagnose liver diseases.",
+          "An amylase test (AMY) measures the amount of amylase in blood or urine (pee). Amylase is an enzyme made by your pancreas and salivary glands that helps your body break down carbohydrates. If an amylase test finds too much amylase in your blood or urine, it may indicate a pancreas disorder or other health condition.",
+          "Bilirubin, Total - This test measures direct and indirect levels of bilirubin for a total bilirubin value. In cases of an obstruction or inflamed liver, the liver cannot eliminate excess bilirubin. When the body has too much bilirubin, your skin and the whites of your eyes will start to yellow causing a condition called jaundice.",
+          "Gamma-glutamyl transferase (GGT)- is an enzyme that's mainly found in your liver. Healthcare providers use GGT blood tests to help diagnose liver conditions or to rule out certain medical conditions based on abnormal results from other liver enzyme tests.",
+          "Total Protein - Total protein measurements can help diagnose liver diseases. Total Protein measures the amount of protein in your blood. The two main proteins found in the blood are globulins and albumin."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s4",
+        "monitors": "ALB, ALP, ALT, AMY, AST, GGT, TBIL, TP",
+        "name": "Liver Panel Plus",
+        "price": 49,
+        "slug": "liver-panel-plus",
+        "summary": "The liver panel plus includes several tests that measure specific proteins and liver enzymes to get an overall sense of how well the liver is working.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362803/national-cancer-institute-vRbPz2qWkaA-unsplash_j167t8.jpg",
+        "bulletpoints": [
+          "Alanine aminotransferase (ALT/SGPT) - ALT is an enzyme found predominantly in the cells of the liver. When the liver is damaged, ALT is released into the blood.",
+          "Aspartate aminotransferase (AST/SGOT) - AST is a liver enzyme that is useful in helping to diagnose liver diseases.",
+          "Blood Urea Nitrogen (BUN) - Blood urea nitrogen is a byproduct of the breakdown of food proteins. Urea is created in the liver and passed out of your body through urine. A normal BUN level varies from 7 to 20. High BUN levels usually mean a decrease in kidney function.",
+          "Creatinine to Bun Ratio (calculated) - The ratio of creatinine to BUN is usually between 10:1 and 20:1. A higher ratio may be caused by a condition that leads to a decrease in blood flow to the kidneys.",
+          "Gamma-glutamyl transferase (GGT)- is an enzyme that's mainly found in your liver. Healthcare providers use GGT blood tests to help diagnose liver conditions or to rule out certain medical conditions based on abnormal results from other liver enzyme tests.",
+          "Glucose - A glucose test measures the amount of a certain kind of sugar (glucose)that's in your blood. High blood glucose levels can lead to damaged eyes, kidneys, blood vessels, and nerves."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s4",
+        "monitors": "ALT, AST, BUN, CRE, GGT, GLU",
+        "name": "General Chemistry 6",
+        "price": 49,
+        "slug": "general-chemistry-6",
+        "summary": "This test gives you a general snapshot of your overall health. It allows the provider to determine if they need to take a closer look at the function of your liver and kidney, and if you’re at potential risks for developing Type 2 diabetes. ",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362823/trust-tru-katsande-6q5QG8iIgRo-unsplash_basuey.jpg",
+        "bulletpoints": [
+          "Alanine aminotransferase (ALT/SGPT) - ALT is an enzyme found predominantly in the cells of the liver. When the liver is damaged, ALT is released into the blood.",
+          "Albumin - Albumin is a protein made by the liver. Measuring levels of albumin is helpful in diagnosing liver disease. An albumin test measures how well your liver is making the proteins that your body needs.",
+          "Alkaline phosphatase (ALP) - In conditions affecting the liver, damaged liver cells release increased amounts of ALP into the blood.",
+          "Aspartate aminotransferase (AST/SGOT) - AST is a liver enzyme that is useful in helping to diagnose liver diseases.",
+          "An amylase test (AMY) measures the amount of amylase in blood or urine (pee). Amylase is an enzyme made by your pancreas and salivary glands that helps your body break down carbohydrates. If an amylase test finds too much amylase in your blood or urine, it may indicate a pancreas disorder or other health condition.",
+          "LDL “Bad Cholesterol”: Low-density lipoprotein cholesterol, this is known as bad cholesterol because it can lead to a hardening and clogging of your arteries.",
+          "HDL “Good cholesterol”: High-density lipoprotein cholesterol, this type of cholesterol helps to remove LDL from your blood.",
+          "Triglycerides: Unused calories are stored by the body as triglycerides in fat (lipid) cells.",
+          "VLDL stands for very-low-density lipoprotein: Your liver makes VLDL and releases it into your bloodstream. The VLDL particles mainly carry triglycerides, another type of fat, to your tissues. VLDL is similar to LDL cholesterol, but LDL mainly carries cholesterol to your tissues instead of triglycerides.",
+          "Glucose - A glucose test measures the amount of a certain kind of sugar (glucose)that's in your blood. High blood glucose levels can lead to damaged eyes, kidneys, blood vessels, and nerves."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s5",
+        "monitors": "ALB, ALP, AMY, AST, CHOL, CHOL/HDL, nHDLc, GLU, HDL, LDL, TRIG, VLDL",
+        "name": "General Chemistry 13",
+        "price": 59,
+        "slug": "general-chemistry-13",
+        "summary": "This test gives a deeper look into your overall health. Like the General Chemistry 6, the General Chemistry 13 measures your glucose level, kidney function, and liver function. In addition, it measures your cholesterol levels.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362884/web_images_1_ij8un2.png",
+        "bulletpoints": [
+          "Carbon dioxide (Bicarbonate) - Your kidneys and lungs balance the levels of carbon dioxide, bicarbonate, and carbonic acid in the blood. Carbon dioxide levels can be used to help diagnose kidney disease.",
+          "Chloride - Chloride is an electrolyte. An increased level of blood chloride may indicate kidney disease.",
+          "Potassium - Potassium is both an electrolyte and a mineral. Potassium regulates the fluid ratio inside of your body and outside of your body. Potassium is a significant factor when it comes to keeping your nerves and muscles working. Kidney disease is the most common cause of high blood potassium.",
+          "Sodium - Sodium, like potassium, is also both an electrolyte and a mineral. Sodium is primarily located in the blood and lymph fluid. A hormone called aldosterone is created by adrenal glands to communicate with your kidneys and let them know how much sodium needs to be passed into the urine. When your sodium levels are low, it could mean heart failure."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s6",
+        "monitors": "Cl, K, Na, tCO2",
+        "name": "Electrolyte Panel",
+        "price": 29,
+        "slug": "electrolyte-panel",
+        "summary": "An electrolyte panel is a blood test that measures if there's an electrolyte imbalance in the body. Electrolytes are salts and minerals, such as sodium, potassium, chloride and bicarbonate, which are found in the blood. They can conduct electrical impulses in the body.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362919/web_images_1_1_xjkz8f.png",
+        "bulletpoints": [
+          "Blood Urea Nitrogen (BUN) - Blood urea nitrogen is a byproduct of the breakdown of food proteins. Urea is created in the liver and passed out of your body through urine. A normal BUN level varies from 7 to 20. High BUN levels usually mean a decrease in kidney function.",
+          "Creatinine to Bun Ratio (calculated) - The ratio of creatinine to BUN is usually between 10:1 and 20:1. A higher ratio may be caused by a condition that leads to a decrease in blood flow to the kidneys."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s7",
+        "monitors": "BUN, CRE",
+        "name": "Kidney Check",
+        "price": 49,
+        "slug": "kidney-check",
+        "summary": "This test gives you  an overall review of your kidney function.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362963/web_images_1_2_fgwg5r.png",
+        "bulletpoints": [
+          "Albumin is a protein found in the blood. If the kidneys are healthy, there should be very little protein in your urine – if any. However, if the kidneys are damaged, albumin may leak out of the kidneys and into your urine.",
+          "BUN (Blood Urea Nitrogen) - Urea nitrogen is a byproduct from the breakdown of food proteins. A normal BUN level is between 7 and 20. As kidney function decreases, the BUN level rises.",
+          "Calcium - Measuring calcium can help determine whether the kidneys are excreting the proper amount of calcium. Too much calcium can also help indicate kidney stones.",
+          "Carbon Dioxide - Your kidneys and lungs balance the levels of carbon dioxide, bicarbonate, and carbonic acid in the blood. High carbon dioxide levels can be used to help diagnose kidney disease.",
+          "Chloride - Chloride is an important electrolyte used by the body to maintain the proper blood volume, blood pressure, blood acidity, and balance of fluid in cells. An increased level of blood chloride may indicate kidney diseases like tubular acidosis, which is when the kidneys do not remove enough acid.",
+          "Creatinine - A waste product that comes from normal wear and tear on the body’s muscles. Creatinine levels in the blood vary depending on age, race, and body size, but a creatinine level greater than 1.2 for women or greater than 1.4 for men may be an indicator that the kidneys are not working properly. The level of creatinine in the blood rises as kidney disease progresses.",
+          "Glucose - Abnormally high levels of glucose in your blood (hyperglycemia) can indicate glycosuria. Renal glycosuria occurs when the renal tubules fail to reabsorb all glucose at a level that is normal.",
+          "Phosphorus - Functioning kidneys can remove extra phosphorus from your blood. Individuals with chronic kidney disease often cannot remove phosphorus from the blood very well. High phosphorus levels can cause damage to your body.",
+          "Potassium - Potassium is an electrolyte that assists in many bodily functions like water balance, digestion, and nerve impulses. Kidney disease can cause both high and low potassium levels",
+          "Sodium - Sodium is the final of the three major electrolytes your body utilizes to control fluid balance inside and out of cells, among other functions. High sodium levels could indicate kidney disease because the body is unable to effectively remove the correct amount.dney-related issues."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s8",
+        "monitors": "ALB, BUN, Ca, Cl, CRE, GLU, K, Na, PHOS, tCO2",
+        "name": "Renal Function Panel",
+        "price": 59,
+        "slug": "renal-function-panel",
+        "summary": "Our Renal Function Test Panel includes ten measurements that provide information necessary to determine your kidney health. Your kidneys filter over 180 liters of blood every day, removing waste and excess water. Without your kidneys filtering ability, the unwanted waste and water would accumulate in your blood and cause damage. By taking this test, a doctor can use the information gathered to help diagnose diseases.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363283/ousa-chea-gKUC4TMhOiY-unsplash_hdgsrf.jpg",
+        "bulletpoints": [
+          "Sodium - Sodium is the final of the three major electrolytes your body uCreatinine Kinase (CK)- this test measures the amount of creatine kinase (CK) in the blood. CK is a type of protein, known as an enzyme. It is mostly found in your skeletal muscles and heart, with lesser amounts in the brain. Skeletal muscles are the muscles attached to your skeleton. They work with your bones to help you move and give your body power and strength. Heart muscles pump blood in and out of the heart.",
+          "Creatinine - A waste product that comes from normal wear and tear on the body’s muscles. Creatinine levels in the blood vary depending on age, race, and body size, but a creatinine level greater than 1.2 for women or greater than 1.4 for men may be an indicator that the kidneys are not working properly. The level of creatinine in the blood rises as kidney disease progresses.",
+          "Glucose - Abnormally high levels of glucose in your blood (hyperglycemia) can indicate glycosuria. Renal glycosuria occurs when the renal tubules fail to reabsorb all glucose at a level that is normal.",
+          "Potassium - Potassium is an electrolyte that assists in many bodily functions like water balance, digestion, and nerve impulses. Kidney disease can cause both high and low potassium levels",
+          "Utilizes to control fluid balance inside and out of cells, among other functions. High sodium levels could indicate kidney disease because the body is unable to effectively remove the correct amount.dney-related issues.",
+          "Carbon Dioxide - Your kidneys and lungs balance the levels of carbon dioxide, bicarbonate, and carbonic acid in the blood. High carbon dioxide levels can be used to help diagnose kidney disease.",
+          "Chloride - Chloride is an important electrolyte used by the body to maintain the proper blood volume, blood pressure, blood acidity, and balance of fluid in cells. An increased level of blood chloride may indicate kidney diseases like tubular acidosis, which is when the kidneys do not remove enough acid."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s9",
+        "monitors": "BUN, CK, Cl, CRE, GLU, K, Na, tCO2",
+        "name": "Metlyte 8 Panel",
+        "price": 49,
+        "slug": "metlyte-8-panel",
+        "summary": "This test is a snapshot of your kidney function, metabolism and electrolyte balance. It also identifies measures for damage or disease of the skeletal muscles, heart or brain.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "bulletpoints": [
+          "Red Blood Cell Count (RBC) - Measures the amount of red blood cells (erythrocytes) in the blood. With the help of hemoglobin, red blood cells carry oxygen throughout the body.",
+          "White Blood Cell Count (WBC) - Detects the amount of white blood cells in the body. White blood cells fight off infections and foreign agents that may infect the body.",
+          "Mean Corpuscular Volume (MCV) - Finds the average size of red blood cells in the body. Coupled with the RDW, this will help the doctor determine how bad the condition is.",
+          "Hematocrit - Determines the amount of space red blood cells take up in the blood. This is affected by the size and number of red blood cells.",
+          "Hemoglobin (Hgb, Hb) - Measures the amount of hemoglobin in the blood. Hemoglobin is a protein found in red blood cells that carries oxygen from the lungs and transports it to the various tissues and organs throughout the body. It also transports carbon dioxide back to the lungs to be converted into oxygen.",
+          "Platelet Count - Identifies the amount of platelets in the blood. Platelets are used to help form blood clots and regenerate new tissue.",
+          "Mean Corpuscular Volume (MCV) - Finds the average size of red blood cells in the body. Coupled with the RDW, this will help the doctor determine how bad the condition is."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s10",
+        "monitors": "RBC, WBC, HGB, HCT, PLT, MCV",
+        "name": "Complete Blood Count",
+        "price": 29,
+        "slug": "complete-blood-count",
+        "summary": "The Complete Blood Count (CBC) test gives an overall view of general health by measuring the health of red blood cells, white blood cells, and platelets. These cells, respectively, provide oxygen to various tissues and organs, help the immune system fight off infections, and assist in the formation of blood clots and the regeneration of new tissues.",
+        "tags": [
+          "Routine Labs"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363320/cdc-wCo9UwZEa18-unsplash_upkdsp.jpg",
+        "bulletpoints": [
+          "Acidity (pH) - The pH level indicates the amount of acid in urine. The pH level might indicate a kidney or urinary tract disorder.",
+          "Concentration - A measure of concentration shows how concentrated the particles are in your urine. A higher than normal concentration often is a result of not drinking enough fluids.",
+          "Protein - Low levels of protein in urine are typical. Small increases in protein in urine usually aren't a cause for concern, but larger amounts might indicate a kidney problem.",
+          "Sugar - The amount of sugar (glucose) in urine is typically too low to be detected. Any detection of sugar on this test usually calls for follow-up testing for diabetes.",
+          "Ketones - As with sugar, any amount of ketones detected in your urine could be a sign of diabetes and requires follow-up testing.",
+          "Bilirubin - Bilirubin is a product of red blood cell breakdown. Usually, bilirubin is carried in the blood and passes into your liver, where it's removed and becomes part of bile. Bilirubin in your urine might indicate liver damage or disease.",
+          "Evidence of infection - Either nitrites or leukocyte esterase — a product of white blood cells — in your urine might indicate a urinary tract infection.",
+          "Blood - Blood in your urine requires additional testing. It may be a sign of kidney damage, infection, kidney or bladder stones, kidney or bladder cancer, or blood disorders."
+        ],
+        "categories": [{"name": "Routine Labs", "slug": "routine-labs"}, {"name": "Diabetes Screen", "slug": "diabetes-screen"}, {"name": "Urine Based Tests", "slug": "urine-based-testing"}],
+        "id": "s11",
+        "monitors": "",
+        "name": "Urinalysis",
+        "price": 29,
+        "slug": "urinalysis",
+        "summary": "A urinalysis is a common method of analyzing urine that is used to assess your health, and to help diagnose renal, systemic, inflammatory, and neoplastic diseases, as well as urinary tract infections and urinary tract neoplasms. Our routine urinalysis contains 12 different parts which analyze numerous levels and elements within urine. All positives found will undergo additional microscope examination. ",
+        "tags": [
+          "Diabetes Screen",
+          "Urine Based Tests",
+          "Routine Labs",
+          "Womens' Health"
+        ],
+        "whatToExpect": "Those who are taking this test should not drink excessive liquids before providing the urine sample. Some believe that drinking large amounts of water before a urine drug test can hide or reduce the chances of a positive result, but all this will do is risk invalidating the test. An official ID card will be needed."
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363283/ousa-chea-gKUC4TMhOiY-unsplash_hdgsrf.jpg",
+        "bulletpoints": [
+          "Blood Urea Nitrogen (BUN) - Blood urea nitrogen is a byproduct of the breakdown of food proteins. Urea is created in the liver and passed out of your body through urine. A normal BUN level varies from 7 to 20. High BUN levels usually mean a decrease in kidney function.",
+          "Creatinine to Bun Ratio (calculated) - The ratio of creatinine to BUN is usually between 10:1 and 20:1. A higher ratio may be caused by a condition that leads to a decrease in blood flow to the kidneys."
+        ],
+        "categories": [{"name": "Diabetes Screen", "slug": "diabetes-screen"}],
+        "id": "s12",
+        "monitors": "",
+        "name": "Hemoglobin A1C",
+        "price": 29,
+        "slug": "hemoglobin-a1c",
+        "summary": "The Hemoglobin A1C test evaluates the average amount of glucose in the blood over an 8-12 week time span by examining how thick the coat of glucose is that is bound to the blood's hemoglobin (or blood sugar levels). When the two bind, the hemoglobin gets a coat of sugar around it. The coat thickens as the amount of glucose in the blood increases. The hemoglobin A1C test measures for HbA1C, a subtype of hemoglobin. **** After a diabetes diagnosis, this test is often recommended four times per year if glycemic goals are not met. If the glycemic control is stable, then twice per year. Those with diabetes often must take extra care to keep their glucose levels as close to normal as possible. Chronically high glucose levels lead to problems like damage to the kidneys, eyes, cardiovascular system, and nerves.",
+        "tags": [
+          "Diabetes Screen"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "bulletpoints": [
+          "6-Acetyl Morphine (6-AM)",
+          "Marijuana (THC)",
+          "Cocaine",
+          "Amphetamines",
+          "Opiates (including Hydrocodone, Hydromorphone, Codeine, and Morphine)",
+          "Phencyclidine (PCP)",
+          "Barbiturates",
+          "Benzodiazepines",
+          "MDMA (Ecstasy/Molly)",
+          "Methadone",
+          "Methaqualone (Quaaludes)",
+          "Propoxyphene"
+        ],
+        "categories": [{"name": "Urine Based Tests", "slug": "urine-based-testing"}],
+        "id": "s13",
+        "monitors": "6-Acetyl Morphine, THC, Cocaine, Amphetamines, Opiates, PCP, MDMA, etc.",
+        "name": "12 Panel Drug Test",
+        "price": 59,
+        "slug": "12-panel-drug-test",
+        "summary": "This 12-panel drug test is used to check for the presence of drug abuse through a urine sample. This test covers more prescription drugs that are often abused, in addition to the most popular illicit drugs. Illicit drugs, also known as street drugs or simply illegal drugs, are almost never prescribed.",
+        "tags": [
+          "Urine Based Tests",
+          "Job Onboarding"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363320/cdc-wCo9UwZEa18-unsplash_upkdsp.jpg",
+        "bulletpoints": [
+          "Lipid and Cholesterol Panel: Measures cholesterol levels to assess cardiovascular health and identify one’s risk for developing cardiovascular disease.",
+          "Comprehensive Metabolic Panel (CMP): Measures substances (proteins, enzymes, electrolytes, etc.) to assess the body’s overall health by looking at metabolism (how the body breaks down and uses food and liquids to provide energy for cells).",
+          "Routine Urinalysis: Identifies signs of various illnesses and conditions, including urinary tract infections (UTIs), kidney disease, and diabetes."
+        ],
+        "categories": [{"name": "Test Bundles", "slug": "test-bundles"}, {"name": "Diabetes Screen", "slug": "diabetes-screen"}, {"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s14",
+        "monitors": "CMP, UA, Lipid panel (choose 2)",
+        "name": "Basic Health Panel",
+        "price": 59,
+        "slug": "basic-health-panel",
+        "summary": "Our basic health panel helps evaluate how well certain organs and bodily systems are working. The results from this test can help providers to identify potential concerns that could negatively impact your health in the future. For example high glucose could indicate a risk of developing diabetes or high cholesterol could indicate a risk of developing cardiovascular disease in the future.",
+        "tags": [
+          "Test Bundles"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363414/akram-huseyn-fKC9eWRnlGY-unsplash_vilofs.jpg",
+        "bulletpoints": [
+          "Lipid and Cholesterol Panel: Measures cholesterol levels to assess cardiovascular health and identify one’s risk for developing cardiovascular disease.",
+          "Comprehensive Metabolic Panel (CMP): Measures substances (proteins, enzymes, electrolytes, etc.) to assess the body’s overall health by looking at metabolism (how the body breaks down and uses food and liquids to provide energy for cells).",
+          "Routine Urinalysis: Identifies signs of various illnesses and conditions, including urinary tract infections (UTIs), kidney disease, and diabetes.",
+          "The Complete Blood Count (CBC) with differential and platelets test helps to give an overall view of general health and screens for a broad scope of diseases and conditions. CBC testing is routinely recommended by doctors and can help doctors understand why patients may exhibit fatigue or easy bruising. It can even help them diagnose conditions such as anemia."
+        ],
+        "categories": [{"name": "Test Bundles", "slug": "test-bundles"}, {"name": "Diabetes Screen", "slug": "diabetes-screen"}, {"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s15",
+        "monitors": "CMP, UA, Lipid Panel, CBC (Choose 3)",
+        "name": "Standard Health Panel",
+        "price": 99,
+        "slug": "standard-health-panel",
+        "summary": "Our Standard Health Panel is a combination of tests that measure and evaluate the body as a whole. The results from this test can give providers a more in depth view of how your organs and if there are any potential risks of developing diseases in the future.",
+        "tags": [
+          "Test Bundles"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363438/rephile-water-cuqp2Jzz_lY-unsplash_c2icja.jpg",
+        "bulletpoints": [
+          "Lipid and Cholesterol Panel: Measures cholesterol levels to assess cardiovascular health and identify one’s risk for developing cardiovascular disease.",
+          "Comprehensive Metabolic Panel (CMP): Measures substances (proteins, enzymes, electrolytes, etc.) to assess the body’s overall health by looking at metabolism (how the body breaks down and uses food and liquids to provide energy for cells).",
+          "Routine Urinalysis: Identifies signs of various illnesses and conditions, including urinary tract infections (UTIs), kidney disease, and diabetes.",
+          "The Complete Blood Count (CBC) with differential and platelets test helps to give an overall view of general health and screens for a broad scope of diseases and conditions. CBC testing is routinely recommended by doctors and can help doctors understand why patients may exhibit fatigue or easy bruising. It can even help them diagnose conditions such as anemia.",
+          "Hemoglobin A1C test evaluates the average amount of glucose in the blood over an 8-12 week time span."
+        ],
+        "categories": [{"name": "Test Bundles", "slug": "test-bundles"}, {"name": "Diabetes Screen", "slug": "diabetes-screen"}, {"name": "Routine Labs", "slug": "routine-labs"}],
+        "id": "s16",
+        "monitors": "CBC, CMP, UA, Lipid Panel, HGA1C",
+        "name": "Comprehensive Health Panel",
+        "price": 139,
+        "slug": "comprehensive-health-panel",
+        "summary": "Our Comprehensive Health Panel is composed of blood measurements that are typically ordered by a provider during your annual primary care visit. This panel of tests will detect possible blood count ailments such as anemia, measure the function of your liver, kidneys, and thyroid as well as detect for risk of developing type 2 diabetes or heart disease.",
+        "tags": [
+          "Test Bundles"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362743/national-cancer-institute-eo_4DqPUSQA-unsplash_bo6kmb.jpg",
+        "categories": [{"name": "Infectious Disease", "slug": "infectious-disease"}],
+        "id": "s17",
+        "monitors": "",
+        "name": "COVID-19 Rapid-PCR swab (nasal)",
+        "price": 159,
+        "slug": "covid-19-rapid-test-pcr",
+        "summary": "This test has a higher sensitivity for the detection of Coronavirus (COVID-19). It can detect the presence of COVID-19 for up to 3 months even if you are no longer contagious. Coronavirus is a respiratory illness caused by a virus transmitted from person to person.",
+        "tags": [
+          "Infectious Disease",
+          "Job Onboarding"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660362823/trust-tru-katsande-6q5QG8iIgRo-unsplash_basuey.jpg",
+        "categories": [{"name": "Infectious Disease", "slug": "infectious-disease"}],
+        "id": "s18",
+        "monitors": "",
+        "name": "COVID-19 Rapid Antigen Test",
+        "price": "Varies",
+        "slug": "covid-19-rapid-antigen-test",
+        "summary": "The rapid antigen test can detect the presence of COVID when you have a higher amount of the virus particles in your system and are more contagious. This test typically can detect the presence of COVID-19 for up to 10-14 days after onset of symptoms.",
+        "tags": [
+          "Infectious Disease",
+          "Job Onboarding"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "categories": [{"name": "Infectious Disease", "slug": "infectious-disease"}],
+        "id": "s19",
+        "monitors": "",
+        "name": "Influenza (Flu) Test",
+        "price": 79,
+        "slug": "flu-test",
+        "summary": "Our rapid influenza test can detect the presence of Influenza A and B. influenza is a contagious respiratory illness caused by the Influenza virus. ",
+        "tags": [
+          "Infectious Disease"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "bulletpoints": [
+          "These vaccines contain material from the virus that causes COVID-19 that gives our cells instructions for how to make a harmless protein that is unique to the virus.",
+          "After our cells make copies of the protein, they destroy the genetic material from the vaccine.",
+          "Our bodies recognize that the protein should not be there and build T-lymphocytes and B-lymphocytes that will remember how to fight the virus that causes COVID-19 if we are infected in the future.",
+          "We offer Pfizer and Moderna for ages 5 and older."
+        ],
+        "categories": [{"name": "Immunizations", "slug": "immunizations"}],
+        "id": "s20",
+        "monitors": "",
+        "name": "COVID-19 Vaccination",
+        "price": "Free",
+        "slug": "covid-19-vaccination",
+        "tags": [
+          "Job Onboarding",
+          "Immunizations"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "categories": [{"name": "Womens' Health", "slug": "womens-health"}],
+        "id": "s21",
+        "monitors": "",
+        "name": "Pregnancy Test",
+        "price": 10,
+        "slug": "pregnancy-test",
+        "summary": "Our pregnancy test is a urine test that screens for the presence of human chorionic gonadotropin (hCG) in urine to aid in the detection of pregnancy",
+        "tags": [
+          "Urine Tests",
+          "Womens' Health"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "id": "s22",
+        "monitors": "",
+        "name": "Thyroid Stimulating Hormone",
+        "price": 29,
+        "slug": "thyroid-stimulating-hormone-test",
+        "summary": "The Thyroids Stimulating Hormone (TSH) test screens your body’s production of TSH. The thyroid regulates how well your body uses energy and produces hormones that are critical to proper organ and cell function. If you have recently been feeling tired or fatigue, excessive weight gain or difficulty conceiving? A TSH screen could possibly detect the presence of Hypothyroidism. If you have been experiencing excessive weight loss, hair loss, persistent vomiting, high blood pressure or fast heart rate, the TSH test could possibly reveal the presence of Hyperthyroidism.",
+        "tags": [
+          "Womens' Health"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "id": "s23",
+        "monitors": "",
+        "name": "Prothrombin Time (PT)/ International Normalized Ratio (INR) Clotting test",
+        "price": 39,
+        "slug": "ptinr-clotting-test",
+        "summary": "The Prothrombin (PT) and International Normalized Ratio clotting test measures the body’s ability to clot. This test is typically requested by providers to monitor patients taking blood thinning medications such as coumadin or heparin.",
+        "tags": [
+          "Clotting Screen"
+        ]
+      },
+      {
+        "bg": "https://res.cloudinary.com/dowmtolou/image/upload/v1660363292/national-cancer-institute-HMQtSQZHPZU-unsplash_hlqrbq.jpg",
+        "id": "s24",
+        "monitors": "",
+        "name": "Rapid Glucose Test",
+        "price": 39,
+        "slug": "rapid-glucose-test",
+        "summary": "Our Rapid Glucose test, also known as the Fasting Blood Glucose test, is most commonly used to diagnose Hyperglycemia and Diabetes. This test is a common clinical evaluation performed by your provider every year and during pregnancy. For best results, a fasting glucose is recommended, but not required. A fasting sample requires you to not consume any food or drink 8 hours prior to testing.",
+        "tags": [
+          "Womens' Health",
+          "Diabetes Screen",
+          "Routine Labs"
+        ]
+      }
+    ]
+  }
+}

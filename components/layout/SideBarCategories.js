@@ -44,7 +44,6 @@ const SideBarCategories = (props) => {
             <Link
               key={Math.random().toString()}
               href={`/categories/${cat.slug}`}
-              replace
             >
               <Text as="p" fontSize={"xl"}>
                 {cat.name}

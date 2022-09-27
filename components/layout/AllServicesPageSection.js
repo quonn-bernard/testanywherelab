@@ -22,7 +22,7 @@ const AllServicesPageSection = () => {
         <Text as="h1" fontWeight={700} fontSize={"xx-large"}>
           Need Something Else?
         </Text>
-        <Button onClick={() => router.push(`/services`)} replace>
+        <Button onClick={() => router.push(`/services`)} >
           View All Services
         </Button>
       </VStack>

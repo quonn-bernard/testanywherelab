@@ -46,7 +46,7 @@ const ServicePage = ({ services, categories }) => {
 
       if (checkedBoxes.length > 1) {
         setServiceList((prev) => {
-         return [...filteredServicesList, ...prev];
+          return [...filteredServicesList, ...prev];
         });
       } else {
         setServiceList(filteredServicesList);
@@ -57,7 +57,7 @@ const ServicePage = ({ services, categories }) => {
       });
 
       if (checkedBoxes.length) {
-        updateFilteredServicesList()
+        updateFilteredServicesList();
         setServiceList(filteredServicesList);
       } else {
         setServiceList(services);
@@ -90,14 +90,14 @@ const ServicePage = ({ services, categories }) => {
         maxW={{ base: "85%", md: "65%", lg: "80%" }}
         padding={"4rem 0"}
       >
-        <Container w="100%" maxW={"100%"}>
-          <Grid
-            templateColumns={{ base: "50% 50%", lg: "25% auto" }}
-            gap={{ base: 16, lg: 20 }}
-            p="0"
-            w="80%"
-          >
-            <Show below="lg">
+        <Show below="lg">
+          <Container w="100%" maxW={"100%"}>
+            <Grid
+              templateColumns={{ base: "50% 50%", lg: "25% auto" }}
+              gap={{ base: 16, lg: 20 }}
+              p="0"
+              w="80%"
+            >
               <ServicesFilterDrawer />
               <Box
                 p="0"
@@ -106,9 +106,10 @@ const ServicePage = ({ services, categories }) => {
               >
                 <ServicesFilter text="Sort By" />
               </Box>
-            </Show>
-          </Grid>
-        </Container>
+            </Grid>
+          </Container>
+        </Show>
+
         <Show below="lg">
           <Divider mt={10} mb={10} />
         </Show>
@@ -118,14 +119,22 @@ const ServicePage = ({ services, categories }) => {
             <GridItem
               borderRadius={10}
               p={{ base: 0, lg: 10 }}
+              pt={{ lg: 5 }}
               color="black"
               height="auto"
               flexDir={"column"}
               order={{ base: 1, lg: 0 }}
             >
-              <Box borderRadius={10} border="1px solid white" px={5} py={3}>
+              <ServicesFilter text="Sort Lab Tests By" />
+              <Box
+                borderRadius={10}
+                border="1px solid black"
+                px={5}
+                py={3}
+                mt={10}
+              >
                 <Text
-                  color={"white"}
+                  color={"black"}
                   fontWeight={700}
                   fontSize={{ base: "2rem", lg: "1.5rem", xl: "2rem" }}
                 >
@@ -143,7 +152,7 @@ const ServicePage = ({ services, categories }) => {
                       <Checkbox
                         value={category.name}
                         onChange={(e) => onFilterChange(e)}
-                        color="white"
+                        color="black"
                         key={category.id}
                       >
                         {category.name}

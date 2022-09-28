@@ -1,5 +1,6 @@
 import { List, ListItem } from "@chakra-ui/react";
 import Link from "next/link";
+import ServicesListItem from "./ServicesListItem";
 
 const ServicesList = (props) => {
   return (
@@ -7,7 +8,7 @@ const ServicesList = (props) => {
       {props.services.map((service, index) => {
         return (
           <ListItem key={index}>
-            <Link href={`/services/${service.slug}`}>{service.name}</Link>
+            <ServicesListItem service={service} />
           </ListItem>
         );
       })}

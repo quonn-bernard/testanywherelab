@@ -24,6 +24,9 @@ let checkedBoxes = [];
 let filteredServicesList = [];
 const ServicePage = ({ services, categories }) => {
   const [serviceList, setServiceList] = useState([]);
+  const [isSorted, setIsSorted] = useState(false);
+  const [isFiltered, setIsFiltered] = useState(false);
+  const [unsortedServiceList, setUnsortedServiceList] = useState([]);
 
   useEffect(() => {
     setServiceList(services);
@@ -41,9 +44,9 @@ const ServicePage = ({ services, categories }) => {
 
   const updateFilteredList = (e) => {
     if (e.target.checked) {
+      setIsFiltered((prev) => !prev);
       checkedBoxes.push(e.target.value);
       updateFilteredServicesList();
-
       if (checkedBoxes.length > 1) {
         setServiceList((prev) => {
           return [...filteredServicesList, ...prev];
@@ -63,6 +66,42 @@ const ServicePage = ({ services, categories }) => {
         setServiceList(services);
       }
     }
+    setUnsortedServiceList((prev) => [...filteredServicesList, ...prev]);
+  };
+
+  const handleSortOptionChange = (sortType) => {
+    if (!isFiltered) {
+      setUnsortedServiceList([...services]);
+    } else {
+      setUnsortedServiceList(filteredServicesList);
+    }
+    setIsSorted(true);
+    let tempSortedList;
+    if (sortType === "name") {
+      tempSortedList = serviceList.sort((a, b) => {
+        if (a.name.toLowerCase() < b.name.toLowerCase()) {
+          return -1;
+        } else if (a.name.toLowerCase() > b.name.toLowerCase()) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+    } else if (sortType === "price") {
+      tempSortedList = serviceList.sort((a, b) => {
+        if (a.price < b.price) {
+          return -1;
+        } else if (a.price > b.price) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+    } else {
+      setServiceList([...unsortedServiceList]);
+      return;
+    }
+    setServiceList([...tempSortedList]);
   };
 
   const onFilterChange = (e) => {
@@ -104,7 +143,10 @@ const ServicePage = ({ services, categories }) => {
                 display={"flex"}
                 justifyContent={{ base: "center", lg: "flex-end" }}
               >
-                <ServicesFilter text="Sort By" />
+                <ServicesFilter
+                  text="Sort By"
+                  onOptionSelect={handleSortOptionChange}
+                />
               </Box>
             </Grid>
           </Container>
@@ -125,7 +167,10 @@ const ServicePage = ({ services, categories }) => {
               flexDir={"column"}
               order={{ base: 1, lg: 0 }}
             >
-              <ServicesFilter text="Sort Lab Tests By" />
+              <ServicesFilter
+                text="Sort Lab Tests By"
+                onOptionSelect={handleSortOptionChange}
+              />
               <Box
                 borderRadius={10}
                 border="1px solid black"
@@ -138,7 +183,7 @@ const ServicePage = ({ services, categories }) => {
                   fontWeight={700}
                   fontSize={{ base: "2rem", lg: "1.5rem", xl: "2rem" }}
                 >
-                  Test Categories
+                  Categories
                 </Text>
                 <VStack
                   my={5}

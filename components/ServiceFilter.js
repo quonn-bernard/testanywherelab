@@ -1,11 +1,17 @@
 import { Select } from "@chakra-ui/react";
 
-const ServicesFilter = ({text=""}) => {
+const ServicesFilter = (props) => {
+  const handleClick = (e) => {
+    props.onOptionSelect(e.target.value)
+  };
   return (
-    <Select placeholder={text} w="100%">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
+    <Select onChange={(e) => handleClick(e)} placeholder={props.text} w="100%">
+      <option onClick={() => handleClick("name")} value="name">
+        Sort by Alphabetical Order
+      </option>
+      <option onClick={() => handleClick("price")} value="price">
+        Sort by Price
+      </option>
     </Select>
   );
 };

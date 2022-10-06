@@ -20,6 +20,8 @@ import GlobalSearch from "../../GlobalSearch";
 import Logo from "../../../public/logo.png";
 import MobileNavDrawer from "./MobileNavDrawer";
 import DropDownMenuItem from "./DropDownMenuItem";
+import ColorModeButton from "../../ColorModeSwitchButton";
+
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
     {children}
@@ -28,8 +30,6 @@ const MenuItems = ({ children }) => (
 
 const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
-  const handleToggle = () => setShow(!show);
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
 
   return (
@@ -83,6 +83,7 @@ const Navigation = (props) => {
             <Show above="md">
               <GlobalSearch />
             </Show>
+            <ColorModeButton />
             <Button rounded={"full"} variant="link">
               CREATE ACCOUNT
             </Button>

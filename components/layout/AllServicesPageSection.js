@@ -9,7 +9,7 @@ const AllServicesPageSection = () => {
       maxW="100%"
       h="300px"
       backgroundImage={
-        "linear-gradient(to right bottom, rgba(0, 170, 166, .9), rgba(0, 170, 166, .95)),url()"
+        "linear-gradient(to right bottom, rgba(255, 255, 255, .5), rgba(0, 170, 166, .9), rgba(0,0,0, .025)),url()"
       }
     >
       <VStack
@@ -22,7 +22,12 @@ const AllServicesPageSection = () => {
         <Text as="h1" fontWeight={700} fontSize={"xx-large"}>
           Need Something Else?
         </Text>
-        <Button onClick={() => router.push(`/services`)} >
+        <Button
+          _hover={{ bg: "secondary", color: "primary" }}
+          bg="primary"
+          color="secondary"
+          onClick={() => router.push(`/services`)}
+        >
           View All Services
         </Button>
       </VStack>

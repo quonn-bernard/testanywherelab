@@ -7,20 +7,13 @@ import {
   Text,
   Button,
   Show,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useDisclosure,
   Container,
 } from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import Image from "next/image";
 import GlobalSearch from "../../GlobalSearch";
-import Logo from "../../../public/logo.png";
 import MobileNavDrawer from "./MobileNavDrawer";
 import DropDownMenuItem from "./DropDownMenuItem";
 import ColorModeButton from "../../ColorModeSwitchButton";
+import SiteLogo from "../../SiteLogo";
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
@@ -30,28 +23,16 @@ const MenuItems = ({ children }) => (
 
 const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
-  const router = useRouter();
 
   return (
-    <Container w="100%" maxW="100%" >
-      <Flex
-        as="nav"
-        align="center"
-        justify="space-between"
-        py="1rem"
-        m="0"
-      >
+    <Container w="100%" maxW="100%">
+      <Flex as="nav" align="center" justify="space-between" py="1rem" m="0">
         <HStack>
-          <Flex h="100%" mx={0}>
-            {/* <Link href="/" border={"1px solid white"}> */}
-              <Image onClick={() => router.push(`/`)} src={Logo} />
-            {/* </Link> */}
-          </Flex>
+          <SiteLogo />
           <Show below="md">
             <GlobalSearch />
           </Show>
-         <MobileNavDrawer />
-          <Show below="md">{/* <DarkModeSwitch /> */}</Show>
+          <MobileNavDrawer />
         </HStack>
 
         <Box
@@ -87,7 +68,6 @@ const Navigation = (props) => {
             <Button rounded={"full"} variant="link">
               CREATE ACCOUNT
             </Button>
-            <Show above="md">{/* <DarkModeSwitch /> */}</Show>
           </HStack>
         </Box>
       </Flex>

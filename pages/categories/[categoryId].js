@@ -11,6 +11,7 @@ import {
   Grid,
   GridItem,
   Button,
+  useColorMode,
 } from "@chakra-ui/react";
 import { useMediaQuery, HStack } from "@chakra-ui/react";
 import { GiTransparentTubes } from "react-icons/gi";
@@ -21,17 +22,11 @@ import { useRouter } from "next/Router";
 import PageContentLayoutGrid from "../../components/layout/AllServicesPageSection";
 import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 import SideBarCategories from "../../components/layout/SideBarCategories";
+import { customTheme } from "../../theme";
 
 const CategoryPage = ({ serviceData, slug, categories, name }) => {
   const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
-  const router = useRouter();
-  const determineItemWidth = () => {
-    if (isLargerThanHD) {
-      return "25%";
-    } else {
-      return "70%";
-    }
-  };
+  const { colorMode } = useColorMode();
 
   return (
     <>
@@ -49,18 +44,16 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
           <Heading>{name} Tests</Heading>
         </Flex>
       </Container>
-      <Container
-        w="100%"
-        maxW={{ base: "85%", md: "65%", lg: "80%" }}
-        padding={"4rem 0"}
-      >
+      <Container w="100%" maxW="100%" padding={"4rem 0"}>
         <Flex
           px={{ base: "1rem", lg: "5rem", xl: "10rem" }}
-          pb={"6rem"}
-          pt={"2rem"}
+          pb={"4rem"}
+          pt={"0"}
           w="100%"
+          borderBottom={"1px"}
+          borderColor={colorMode === "dark" ? customTheme.colors.highlight : customTheme.colors.secondary}
         >
-          <Text fontSize={"25px"} textAlign="center">
+          <Text fontSize={"20px"}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -70,6 +63,12 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
             type specimen book.
           </Text>
         </Flex>
+      </Container>
+      <Container
+        w="100%"
+        maxW={{ base: "85%", md: "65%", lg: "80%" }}
+        padding={"1rem 0"}
+      >
         <Grid
           templateColumns={{ base: "100%", lg: "25% auto" }}
           gap={{ base: 16, lg: 20 }}
@@ -78,9 +77,7 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
           <GridItem order={{ base: 1, lg: 2 }}>
             <Grid gap={2}>
               {serviceData.map((cat) => {
-                return (
-                  <ServicesListItem service={cat} />
-                );
+                return <ServicesListItem service={cat} />;
               })}
             </Grid>
           </GridItem>

@@ -15,19 +15,13 @@ import DropDownMenuItem from "./DropDownMenuItem";
 import ColorModeButton from "../../ColorModeSwitchButton";
 import SiteLogo from "../../SiteLogo";
 
-const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
-    {children}
-  </Text>
-);
-
 const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
 
   return (
     <Container w="100%" maxW="100%">
       <Flex as="nav" align="center" justify="space-between" py="1rem" m="0">
-        <HStack>
+        <HStack >
           <SiteLogo />
           <Show below="md">
             <GlobalSearch />
@@ -36,7 +30,9 @@ const Navigation = (props) => {
         </HStack>
 
         <Box
-          display={{ base: show ? "block" : "none", md: "flex" }}
+          display={{ 
+            base: show ? "block" : "none", md: "flex"
+           }}
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}

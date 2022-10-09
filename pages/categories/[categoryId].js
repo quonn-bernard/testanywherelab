@@ -7,10 +7,8 @@ import {
   Text,
   Flex,
   Heading,
-  Box,
   Grid,
   GridItem,
-  Button,
   useColorMode,
 } from "@chakra-ui/react";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
@@ -18,7 +16,7 @@ import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 import { customTheme } from "../../theme";
 
-const CategoryPage = ({ serviceData, slug, categories, name }) => {
+const CategoryPage = ({ serviceData, categories, name }) => {
   const { colorMode } = useColorMode();
 
   return (

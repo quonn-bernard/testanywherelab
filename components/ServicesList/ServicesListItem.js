@@ -3,7 +3,6 @@ import {
   HStack,
   Text,
   useMediaQuery,
-  Link,
   Button,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";

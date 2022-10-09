@@ -12,4 +12,9 @@ export const customTheme = extendTheme({
     secondary: "#1a202c",
     highlight: "#069e9c",
   },
+  sizing: {
+    containers: {
+      default: { base: "85%", md: "65%", lg: "80%" }
+    }
+  }
 });

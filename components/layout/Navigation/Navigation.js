@@ -21,9 +21,9 @@ const Navigation = (props) => {
   return (
     <Container w="100%" maxW="100%">
       <Flex as="nav" align="center" justify="space-between" py="1rem" m="0">
-        <HStack >
+        <HStack>
           <SiteLogo />
-          <Show below="md">
+          <Show below="lg">
             <GlobalSearch />
           </Show>
           <MobileNavDrawer />
@@ -31,7 +31,7 @@ const Navigation = (props) => {
 
         <Box
           display={{ 
-            base: show ? "block" : "none", md: "flex"
+            base: "none", lg: "flex"
            }}
           width={{ base: "full", md: "auto" }}
           alignItems="center"
@@ -52,12 +52,12 @@ const Navigation = (props) => {
           display={{
             base: show ? "block" : "none",
             sm: show ? "block" : "none",
-            md: "block",
+            lg: "block",
           }}
           mt={{ base: 4, md: 0 }}
         >
           <HStack gap={3}>
-            <Show above="md">
+            <Show above="lg">
               <GlobalSearch />
             </Show>
             <ColorModeButton />

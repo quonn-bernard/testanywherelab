@@ -27,7 +27,7 @@ const MobileNavDrawer = () => {
   const {colorMode} = useColorMode();
   return (
     <>
-      <Box display={{ sm: "block", md: "none" }} onClick={onOpen}>
+      <Box display={{ sm: "block", lg: "none" }} onClick={onOpen}>
         <svg
           width="25px"
           viewBox="0 0 20 20"

@@ -13,19 +13,12 @@ import {
   Button,
   useColorMode,
 } from "@chakra-ui/react";
-import { useMediaQuery, HStack } from "@chakra-ui/react";
-import { GiTransparentTubes } from "react-icons/gi";
-import { CategoryList } from "../../components/CategoriesList/CategoriesList";
-import GlobalSearch from "../../components/GlobalSearch";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
-import { useRouter } from "next/Router";
-import PageContentLayoutGrid from "../../components/layout/AllServicesPageSection";
 import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 import { customTheme } from "../../theme";
 
 const CategoryPage = ({ serviceData, slug, categories, name }) => {
-  const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
   const { colorMode } = useColorMode();
 
   return (
@@ -51,7 +44,11 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
           pt={"0"}
           w="100%"
           borderBottom={"1px"}
-          borderColor={colorMode === "dark" ? customTheme.colors.highlight : customTheme.colors.secondary}
+          borderColor={
+            colorMode === "dark"
+              ? customTheme.colors.highlight
+              : customTheme.colors.secondary
+          }
         >
           <Text fontSize={"20px"}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -67,7 +64,7 @@ const CategoryPage = ({ serviceData, slug, categories, name }) => {
       <Container
         w="100%"
         maxW={{ base: "85%", md: "65%", lg: "80%" }}
-        padding={"1rem 0"}
+        padding={"1rem 0 5rem"}
       >
         <Grid
           templateColumns={{ base: "100%", lg: "25% auto" }}

@@ -1,58 +1,37 @@
-import { GridItem, HStack, Text, Box } from "@chakra-ui/react";
+import { GridItem, Text, Box, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
-import GlobalSearch from "../GlobalSearch";
-import { GiTransparentTubes } from "react-icons/gi";
+import { customTheme } from "../../theme";
 
 const SideBarCategories = (props) => {
+
+  const { colorMode } = useColorMode();
+
   return (
     <GridItem
       order={{ base: 2, lg: 1 }}
-      border={"1px solid white"}
-      borderRadius={10}
-      px={8}
-      color="black"
-      bg="white"
-      justifyContent="center"
-      alignItems="center"
-      height={475}
+      color={colorMode === 'dark' ? customTheme.colors.primary : customTheme.colors.secondary}
+      justifyContent="flex-start"
+      alignItems="flex-start"
       display={"flex"}
       flexDir={"column"}
     >
-      <HStack
-        mb={5}
-        w={"100%"}
-        border={"1px solid black"}
-        justifyContent="center"
-        bg="black"
-        color="white"
-        p={3}
-      >
-        <GiTransparentTubes fontSize={20} />
-        <Text
-          as={"p"}
-          fontSize={{ base: "16px" }}
-          mt={0}
-          fontWeight={700}
-          letterSpacing={2}
-        >
-          LAB CATEGORIES
-        </Text>
-      </HStack>
-      <Box mb={10}>
+      <Text as={"p"} pt={"1rem"} fontSize={{ base: "2rem", lg: "1.75rem" }} fontWeight={700}>
+        Test Category
+      </Text>
+      <Box my={6} pl="0">
         {props.categories.map((cat) => {
           return (
             <Link
               key={Math.random().toString()}
               href={`/categories/${cat.slug}`}
             >
-              <Text as="p" fontSize={"xl"}>
+              <Text as="p" fontSize={{ base: "1.5rem", lg: "1.75rem" }} pl={0}>
                 {cat.name}
               </Text>
             </Link>
           );
         })}
       </Box>
-      <GlobalSearch text="SEARCH OUR TESTS" />
     </GridItem>
   );
 };

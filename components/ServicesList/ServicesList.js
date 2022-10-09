@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { List, ListItem, Spinner } from "@chakra-ui/react";
+import { List, ListItem } from "@chakra-ui/react";
 import ServicesListItem from "./ServicesListItem";
 
 const ServicesList = (props) => {

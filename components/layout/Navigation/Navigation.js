@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   Box,
   HStack,
   Flex,
   Text,
-  Button,
   Show,
   Container,
 } from "@chakra-ui/react";
@@ -14,12 +13,14 @@ import MobileNavDrawer from "./MobileNavDrawer";
 import DropDownMenuItem from "./DropDownMenuItem";
 import ColorModeButton from "../../ColorModeSwitchButton";
 import SiteLogo from "../../SiteLogo";
+import { customTheme } from "../../../theme";
 
 const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
-
+  const customContainerSize = customTheme.sizing.containers;
+  
   return (
-    <Container w="100%" maxW="100%">
+    <Container w="100%" maxW={customContainerSize.default}>
       <Flex as="nav" align="center" justify="space-between" py="1rem" m="0">
         <HStack>
           <SiteLogo />
@@ -30,9 +31,10 @@ const Navigation = (props) => {
         </HStack>
 
         <Box
-          display={{ 
-            base: "none", lg: "flex"
-           }}
+          display={{
+            base: "none",
+            lg: "flex",
+          }}
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}
@@ -40,11 +42,14 @@ const Navigation = (props) => {
           flexDirection={"row"}
         >
           <DropDownMenuItem />
-          <Text mr={5}>
+          <Text mx={5}>
             <Link href="/about">ABOUT </Link>
           </Text>
           <Text mr={5}>
             <Link href="/contact">CONTACT</Link>
+          </Text>
+          <Text mr={5}>
+            <Link href="/contact">CREATE ACCOUNT</Link>
           </Text>
         </Box>
 
@@ -61,9 +66,6 @@ const Navigation = (props) => {
               <GlobalSearch />
             </Show>
             <ColorModeButton />
-            <Button rounded={"full"} variant="link">
-              CREATE ACCOUNT
-            </Button>
           </HStack>
         </Box>
       </Flex>

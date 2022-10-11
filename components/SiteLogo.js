@@ -13,6 +13,7 @@ const SiteLogo = () => {
       maxW={{ base: "95%", lg: "85%" }}
       pt={2}
       mr={{ base: 4, lg: 0 }}
+      cursor={"pointer"}
     >
       {useColorMode().colorMode === "dark" ? (
         <Image onClick={() => router.push(`/`)} src={Logo} />

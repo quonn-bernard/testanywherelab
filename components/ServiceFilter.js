@@ -15,6 +15,7 @@ const ServicesFilter = (props) => {
       w="100%"
       color={blkToWht}
       borderColor={blkToWht}
+      minWidth="220px"
     >
       <option onClick={() => handleClick("name")} value="name">
         Sort by Alphabetical Order

@@ -181,6 +181,7 @@ const ServicePage = ({ services, categories }) => {
                 mt={10}
                 borderColor={blkToWht}
                 color={blkToWht}
+                minWidth="220px"
               >
                 <Text
                   fontWeight={700}

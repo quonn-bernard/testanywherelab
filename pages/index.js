@@ -1,18 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import store from "../components/store";
 import { fetchServicesData } from "../components/store/appDataActions";
-import {
-  Flex,
-  Container,
-  VStack,
-  Button,
-} from "@chakra-ui/react";
+import { Flex, Container, VStack, Button } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Heading, HStack } from "@chakra-ui/react";
 import Carousel from "../components/Carousel";
+import { useRouter } from "next/router";
 
 const HomePage = ({ categories }) => {
   const [categoryList, setCategoryList] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     setCategoryList(categories);
@@ -42,7 +39,7 @@ const HomePage = ({ categories }) => {
             md: "6rem 4rem 7rem",
             lg: "8rem 6rem 9rem",
           }}
-          h={{base: "auto", lg: "60vh"}}
+          h={{ base: "auto", lg: "60vh" }}
         >
           <VStack
             w={{ base: "100vh", sm: "85vh", lg: "65vh" }}
@@ -68,7 +65,9 @@ const HomePage = ({ categories }) => {
               CLIA certified lab and typically provide lab results in 24hrs or
               less!
             </Text>
-            <Button>VIEW ALL SERVICES</Button>
+            <Button onClick={() => router.push(`/services`)}>
+              VIEW ALL SERVICES
+            </Button>
           </VStack>
         </Flex>
       </Container>

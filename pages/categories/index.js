@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CategoryList from "../../components/CategoriesList/CategoriesList";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
-import ListSearch from "../../utils/ListSearch";
 
 const HomePage = ({ categories }) => {
   const [categoryList, setCategoryList] = useState([]);
@@ -10,10 +9,6 @@ const HomePage = ({ categories }) => {
   useEffect(() => {
     setCategoryList(categories);
   }, []);
-
-  const handleChange = (e) => {
-    setCategoryList(ListSearch(e, categories));
-  };
 
   return (
     <>

@@ -23,7 +23,7 @@ const AllServicesPageSection = () => {
           Need Something Else?
         </Text>
         <Button
-          _hover={{ bg: "secondary", color: "primary" }}
+          // _hover={{ bg: "secondary", color: "primary" }}
           bg="primary"
           color="secondary"
           onClick={() => router.push(`/services`)}

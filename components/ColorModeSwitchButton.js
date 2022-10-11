@@ -10,9 +10,9 @@ const ColorModeButton = () => {
     <header>
       <Button
         bg="highlight"
-        _hover={
-          colorMode === "dark" ? customColors.highlight : customColors.highlight
-        }
+        // _hover={
+        //   colorMode === "dark" ? customColors.highlight : customColors.highlight
+        // }
         color="primary"
         onClick={toggleColorMode}
       >

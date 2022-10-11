@@ -18,7 +18,7 @@ import { customTheme } from "../../../theme";
 const Navigation = (props) => {
   const [show, setShow] = React.useState(false);
   const customContainerSize = customTheme.sizing.containers;
-  
+
   return (
     <Container w="100%" maxW={customContainerSize.default}>
       <Flex as="nav" align="center" justify="space-between" py="1rem" m="0">

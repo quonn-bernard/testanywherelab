@@ -11,11 +11,12 @@ import {
 
 const DropDownMenuItem = () => {
   return (
-    <Menu>
-      <MenuButton p={0} m={0} as={Button} variant={""} rightIcon={<ChevronDownIcon />}>
+    <Menu onClick={() => router.push(`/services`)}>
+      <MenuButton p={0} m={0} as={Button} variant={""} rightIcon={<ChevronDownIcon />} >
         SERVICES
       </MenuButton>
       <MenuList>
+      <MenuItem><Link pt={2} href="/services" ><Text>All Services</Text></Link></MenuItem>
       <MenuItem><Link pt={2} href="/categories/routine-labs" ><Text>Routine Labs</Text></Link></MenuItem>
       <MenuItem><Link pt={2} href="/categories/infectious-disease" replace={true}><Text>Infectious Disease</Text></Link></MenuItem>
       <MenuItem><Link pt={2} href="/categories/diabetes-screening" replace={true}><Text>Diabetes Screening</Text></Link></MenuItem>

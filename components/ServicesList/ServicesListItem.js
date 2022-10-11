@@ -3,13 +3,16 @@ import {
   HStack,
   Text,
   useMediaQuery,
-  Link,
   Button,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import useCustomColorMode from "../hooks/useCustomColorMode";
+
 const ServicesListItem = (props) => {
   const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
   const router = useRouter();
+  const { blkToWht } = useCustomColorMode();
+
   const determineItemWidth = () => {
     if (isLargerThanHD) {
       return "25%";
@@ -20,10 +23,11 @@ const ServicesListItem = (props) => {
   return (
     <GridItem
       key={Math.random().toString()}
-      border={"1px solid white"}
+      border={"1px solid"}
       borderTopWidth={0}
       borderRightWidth={0}
       borderLeftWidth={0}
+      borderColor={blkToWht}
       w="100%"
       padding="1rem 0"
       backgroundSize={"cover"}
@@ -33,10 +37,9 @@ const ServicesListItem = (props) => {
       mb={5}
     >
       <HStack justifyContent={"space-between"} w={"100%"}>
-      
-          <Text fontSize={{ base: "1rem", lg: "1.75rem" }} fontWeight={700}>
-            {props.service.name}
-          </Text>
+        <Text fontSize={{ base: "1rem", lg: "1.75rem" }} fontWeight={700}>
+          {props.service.name}
+        </Text>
         <Button
           onClick={() => router.push(`/services/${props.service.slug}`)}
           replace="true"

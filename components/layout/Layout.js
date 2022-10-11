@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Container, Grid, GridItem } from "@chakra-ui/react";
-import Navigation from "./Navigation";
+import Navigation from "../layout/Navigation/Navigation";
 import BottomNavigation from "./BottomNav";
 import Footer from "./Footer";
 

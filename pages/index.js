@@ -1,18 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import store from "../components/store";
 import { fetchServicesData } from "../components/store/appDataActions";
-import ListSearch from "../utils/ListSearch";
 import {
-  Grid,
-  SimpleGrid,
-  GridItem,
   Flex,
   Container,
   VStack,
   Button,
 } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import { Heading, useMediaQuery, Box, HStack } from "@chakra-ui/react";
+import { Heading, HStack } from "@chakra-ui/react";
 import Carousel from "../components/Carousel";
 
 const HomePage = ({ categories }) => {

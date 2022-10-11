@@ -44,7 +44,7 @@ function GlobalSearch({ text = null }) {
         onClick={onOpen}
         background="black"
         color={"white"}
-        _hover={{ background: "teal" }}
+        // _hover={{ background: "teal" }}
       >
         <BsSearch />
         {text ? <Text ml={3}>{text}</Text> : null}

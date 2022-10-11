@@ -19,6 +19,7 @@ import {
 import PageContentLayoutGrid from "../../components/layout/PageContentLayoutGrid";
 import ServicesFilter from "../../components/ServiceFilter";
 import ServicesFilterDrawer from "../../components/ServiceFilterDrawer";
+import useCustomColorMode from "../../components/hooks/useCustomColorMode";
 
 let checkedBoxes = [];
 let filteredServicesList = [];
@@ -27,6 +28,7 @@ const ServicePage = ({ services, categories }) => {
   const [isSorted, setIsSorted] = useState(false);
   const [isFiltered, setIsFiltered] = useState(false);
   const [unsortedServiceList, setUnsortedServiceList] = useState([]);
+  const { blkToWht } = useCustomColorMode();
 
   useEffect(() => {
     setServiceList(services);
@@ -173,13 +175,15 @@ const ServicePage = ({ services, categories }) => {
               />
               <Box
                 borderRadius={10}
-                border="1px solid black"
+                border="1px solid"
                 px={5}
                 py={3}
                 mt={10}
+                borderColor={blkToWht}
+                color={blkToWht}
+                minWidth="220px"
               >
                 <Text
-                  color={"black"}
                   fontWeight={700}
                   fontSize={{ base: "2rem", lg: "1.5rem", xl: "2rem" }}
                 >
@@ -197,7 +201,6 @@ const ServicePage = ({ services, categories }) => {
                       <Checkbox
                         value={category.name}
                         onChange={(e) => onFilterChange(e)}
-                        color="black"
                         key={category.id}
                       >
                         {category.name}

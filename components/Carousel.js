@@ -1,34 +1,24 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  useMediaQuery,
-  useColorModeValue,
-  Box,
-  HStack,
-  Button
-} from "@chakra-ui/react";
+import { useMediaQuery, Box, Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
-// import useCustomTheme from "../Hooks/useCustomTheme";
-// import DefaultButton from "../Buttons/DefaultButton";
-// import useServicesData from "../Hooks/useServicesData";
-
 const Carousel = (props) => {
-  const [width, setWidth] = useState(0);
-  const [categoryList, setCategoryList] = useState([]);
-
-  // const {appData} = useServicesData('categories')
-  const carousel = useRef();
+  const [width, setWidth] = useState();
+  const carousel = useRef(null);
   const router = useRouter();
 
   useEffect(() => {
+    document.onreadystatechange = () => {
+    console.log(carousel.current.offsetWidth)
+    }
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
+  }, [carousel.current ]);
 
-  const [isLargerThanHD] = useMediaQuery(["(min-width: 992px)"]);
+  const [isLargerThan992] = useMediaQuery(["(min-width: 992px)"]);
 
   const determineItemWidth = () => {
-    if (isLargerThanHD) {
+    if (isLargerThan992) {
       return "25%";
     } else {
       return "70%";
@@ -36,17 +26,13 @@ const Carousel = (props) => {
   };
 
   const determineItemMArgin = () => {
-    if (isLargerThanHD) {
+    if (isLargerThan992) {
       return ".6% 1.95% .6% .05%";
     } else {
       return "0 1.25% .6% 1.25%";
     }
   };
 
-  //   const { dark, light, neutral } = useCustomTheme();
-  // const carouselItemTitle = useColorModeValue(neutral, neutral)
-  // const carouselItemBorderColor = useColorModeValue(neutral, dark)
-  // const caruselItemBgColor = useColorModeValue(light, light)
   return (
     <motion.div
       className="carousel"
@@ -55,7 +41,6 @@ const Carousel = (props) => {
         cursor: "grab",
         margin: "0 1%",
         overflow: "hidden",
-        width: "100vw",
       }}
     >
       <motion.div
@@ -64,10 +49,10 @@ const Carousel = (props) => {
         className="inner-carousel"
         style={{
           display: "flex",
-          padding: "1.5rem 0"
+          padding: "1.5rem 0",
         }}
       >
-        {props.categories.map((item) => {
+        {props.categories.map((item, index) => {
           return (
             <motion.div
               className="item"
@@ -80,7 +65,7 @@ const Carousel = (props) => {
                 border: "1px solid black",
                 position: "relative",
               }}
-              key={Math.random().toString()}
+              key={item.name}
             >
               <span
                 style={{
@@ -95,7 +80,9 @@ const Carousel = (props) => {
               </span>
 
               <Box position="absolute" bottom="20px">
-                <Button onClick={() => router.push(`categories/${item.slug}`)}>Learn More</Button>
+                <Button onClick={() => router.push(`categories/${item.slug}`)}>
+                  Learn More
+                </Button>
               </Box>
             </motion.div>
           );

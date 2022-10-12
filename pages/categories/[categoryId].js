@@ -1,7 +1,5 @@
-import { useEffect } from "next/Router";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
-import Link from "next/link";
 import {
   Container,
   Text,

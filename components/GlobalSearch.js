@@ -27,7 +27,7 @@ function GlobalSearch({ text = null }) {
   useEffect(() => {
     dispatch(fetchServicesData());
     setServices([]);
-  }, []);
+  }, [dispatch]);
 
   const handleChange = (e) => {
     if (e.target.value.length > 0) {
@@ -39,13 +39,7 @@ function GlobalSearch({ text = null }) {
 
   return (
     <>
-      <Button
-        ref={btnRef}
-        onClick={onOpen}
-        background="black"
-        color={"white"}
-        // _hover={{ background: "teal" }}
-      >
+      <Button ref={btnRef} onClick={onOpen} background="black" color={"white"}>
         <BsSearch />
         {text ? <Text ml={3}>{text}</Text> : null}
       </Button>

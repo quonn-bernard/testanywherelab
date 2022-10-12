@@ -32,7 +32,7 @@ const ServicePage = ({ services, categories }) => {
 
   useEffect(() => {
     setServiceList(services);
-  }, []);
+  }, [services]);
 
   const updateFilteredServicesList = () => {
     checkedBoxes.forEach((category) => {

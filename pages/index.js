@@ -13,7 +13,7 @@ const HomePage = ({ categories }) => {
 
   useEffect(() => {
     setCategoryList(categories);
-  }, []);
+  }, [categories]);
 
   return (
     <>

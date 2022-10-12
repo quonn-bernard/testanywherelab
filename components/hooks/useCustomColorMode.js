@@ -1,15 +1,13 @@
 import { useColorMode } from "@chakra-ui/react";
 import { customTheme } from "../../theme";
 
-const blkToWhtColorMode = () => {
+const useCustomColorMode = () => {
   const { colorMode } = useColorMode();
-  return colorMode === "light"
+  const color = colorMode === "light"
     ? customTheme.colors.secondary
     : customTheme.colors.primary;
-};
 
-const useCustomColorMode = () => {
-  return { blkToWht: blkToWhtColorMode };
+  return { blkToWht: color };
 };
 
 export default useCustomColorMode;

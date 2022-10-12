@@ -3,9 +3,10 @@ import { customTheme } from "../../theme";
 
 const useCustomColorMode = () => {
   const { colorMode } = useColorMode();
-  const color = colorMode === "light"
-    ? customTheme.colors.secondary
-    : customTheme.colors.primary;
+  const color =
+    colorMode === "light"
+      ? customTheme.colors.secondary
+      : customTheme.colors.primary;
 
   return { blkToWht: color };
 };

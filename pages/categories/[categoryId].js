@@ -49,13 +49,13 @@ const CategoryPage = ({ serviceData, categories, name }) => {
           }
         >
           <Text fontSize={"20px"}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
+            {`Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. Lorem Ipsum has been
             the industry's standard dummy text ever since the 1500s, when an
             unknown printer took a galley of type and scrambled it to make a
-            type specimen book.
+            type specimen book.`}
           </Text>
         </Flex>
       </Container>
@@ -71,8 +71,8 @@ const CategoryPage = ({ serviceData, categories, name }) => {
           <SideBarCategories categories={categories} />
           <GridItem order={{ base: 1, lg: 2 }}>
             <Grid gap={2}>
-              {serviceData.map((cat) => {
-                return <ServicesListItem service={cat} />;
+              {serviceData.map((cat, index) => {
+                return <ServicesListItem service={cat} key={index} />;
               })}
             </Grid>
           </GridItem>

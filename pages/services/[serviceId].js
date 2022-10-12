@@ -24,7 +24,7 @@ import { useRouter } from "next/router";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 
-const servicePage = ({ serviceData, categories }) => {
+const ServicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
   const router = useRouter()
@@ -148,4 +148,4 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default servicePage;
+export default ServicePage;

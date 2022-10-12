@@ -11,6 +11,7 @@ export const customTheme = extendTheme({
     primary: "#fff",
     secondary: "#1a202c",
     highlight: "#069e9c",
+    accent: "#eb1899",
   },
   sizing: {
     containers: {

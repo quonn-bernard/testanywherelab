@@ -9,7 +9,7 @@ const ServicesList = (props) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     setListCount(6);
-  });
+  }, []);
 
   const loadMoreServices = () => {
     setTimeout(() => {

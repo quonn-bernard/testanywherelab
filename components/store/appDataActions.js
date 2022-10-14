@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 export const fetchServicesData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3002/api");
+      const response = await fetch("https://testanywherelab-6zlojb2yj-test-anywhere-lab.vercel.app/api");
 
       if (!response.ok) {
         throw new Error("Encountered a problem, while fetching services data");

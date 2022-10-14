@@ -103,14 +103,14 @@ export async function getStaticProps({ params }) {
   const services = await store.getState().appData.services;
   const categories = await store.getState().appData.categories;
 
-  const catKey = categories.filter((cat) => {
+  const catKeys = categories.filter((cat) => {
     if (cat.slug === params.categoryId) {
-      return cat;
+      return {cat: cat, name: cat.name};
     }
   });
 
   const svcData = services.filter((svc) => {
-    if (svc.tags.indexOf(catKey[0].name) !== -1) {
+    if (svc.tags.indexOf(catKeys[0].name) !== -1) {
       return svc;
     }
   });
@@ -121,8 +121,8 @@ export async function getStaticProps({ params }) {
       services: services,
       categories: categories,
       serviceData: svcData,
-      catkey: catKey,
-      name: catKey[0].name,
+      catkey: catKeys,
+      name: catKeys[0].name,
       slug: params.categoryId,
     },
   };

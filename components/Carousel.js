@@ -13,7 +13,7 @@ const Carousel = (props) => {
     console.log(carousel.current.offsetWidth)
     }
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, [carousel.current.scrollWidth, carousel.current.offsetWidth]);
+  }, []);
 
   const [isLargerThan992] = useMediaQuery(["(min-width: 992px)"]);
 

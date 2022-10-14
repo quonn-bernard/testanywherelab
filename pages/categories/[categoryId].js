@@ -14,7 +14,7 @@ import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 import { customTheme } from "../../theme";
 
-const CategoryPage = ({ serviceData, categories, name }) => {
+const CategoryPage = ({ serviceData, categories }) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -30,7 +30,7 @@ const CategoryPage = ({ serviceData, categories, name }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{name} Tests</Heading>
+          <Heading> Tests</Heading>
         </Flex>
       </Container>
       <Container w="100%" maxW="100%" padding={"4rem 0"}>
@@ -105,12 +105,16 @@ export async function getStaticProps({ params }) {
 
   const catKeys = categories.filter((cat) => {
     if (cat.slug === params.categoryId) {
-      return {cat: cat, name: cat.name};
+      return cat;
     }
   });
 
   const svcData = services.filter((svc) => {
-    if (svc.tags.indexOf(catKeys[0].name) !== -1) {
+    let obj = {}
+    catKeys.forEach(cat => {
+      obj = cat
+    })
+    if (svc.tags.indexOf(obj.name) !== -1) {
       return svc;
     }
   });
@@ -122,7 +126,7 @@ export async function getStaticProps({ params }) {
       categories: categories,
       serviceData: svcData,
       catkey: catKeys,
-      name: catKeys[0].name,
+      // name: catKeys[0].name,
       slug: params.categoryId,
     },
   };

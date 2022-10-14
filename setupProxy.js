@@ -10,10 +10,9 @@ app.use(
   })
 );
 
-app.get("/api", (req, res) => {
+app.get("/api", (res) => {
     axios.get("https://testanywhere-db-default-rtdb.firebaseio.com/data.json").then(response => {
         res.json(response.data)
-        console.log(response.data)
     }).catch(error => {
         res.json(error)
     })

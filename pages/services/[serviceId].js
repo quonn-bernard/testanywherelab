@@ -27,6 +27,7 @@ import SideBarCategories from "../../components/layout/SideBarCategories";
 const ServicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
+  const [labServiceSmmary, setLabServiceSummary] = useState();
   const router = useRouter();
 
   const getItemId = () => {
@@ -35,6 +36,7 @@ const ServicePage = ({ serviceData, categories }) => {
 
   useEffect(() => {
     setLabServicBulletpoints(svcData.bulletpoints);
+    setLabServiceSummary(svcData.summary)
   }, [svcData]);
 
   return (
@@ -72,7 +74,7 @@ const ServicePage = ({ serviceData, categories }) => {
               </Button>
             </Box>
             <Box mt={5} mb={10} fontSize={"lg"}>
-              {svcData.summary}
+              {labServiceSmmary}
             </Box>
             <Divider />
             <Text as="h1" fontWeight={700} fontSize={"xx-large"} mt={10} mb={5}>

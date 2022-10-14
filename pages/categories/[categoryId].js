@@ -14,7 +14,7 @@ import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 import { customTheme } from "../../theme";
 
-const CategoryPage = ({ serviceData, categories, name }) => {
+const CategoryPage = ({ serviceData, categories }) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -30,7 +30,7 @@ const CategoryPage = ({ serviceData, categories, name }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{name} Tests</Heading>
+          <Heading> Tests</Heading>
         </Flex>
       </Container>
       <Container w="100%" maxW="100%" padding={"4rem 0"}>
@@ -126,7 +126,7 @@ export async function getStaticProps({ params }) {
       categories: categories,
       serviceData: svcData,
       catkey: catKeys,
-      name: obj.name,
+      // name: obj.name,
       slug: params.categoryId,
     },
   };

@@ -24,7 +24,7 @@ import { useRouter } from "next/router";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 
-const ServicePage = ({ serviceData, categories, name }) => {
+const ServicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
   const router = useRouter();
@@ -50,7 +50,7 @@ const ServicePage = ({ serviceData, categories, name }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{name}</Heading>
+          <Heading></Heading>
         </Flex>
       </Container>
       <Container
@@ -147,7 +147,7 @@ export async function getStaticProps({ params }) {
     props: {
       serviceData: svcData,
       categories: categories,
-      name: obj.name,
+      // name: obj.name,
     },
   };
 }

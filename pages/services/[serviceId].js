@@ -14,7 +14,7 @@ import {
   ListItem,
   Divider,
   Button,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 import { GiTransparentTubes } from "react-icons/gi";
 import { IoIosCalendar } from "react-icons/io";
@@ -24,10 +24,10 @@ import { useRouter } from "next/router";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 
-const ServicePage = ({ serviceData, categories }) => {
+const ServicePage = ({ serviceData, categories, name }) => {
   const svcData = serviceData[0];
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
-  const router = useRouter()
+  const router = useRouter();
 
   const getItemId = () => {
     return Math.random().toString();
@@ -50,7 +50,7 @@ const ServicePage = ({ serviceData, categories }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{svcData.name}</Heading>
+          <Heading>{name}</Heading>
         </Flex>
       </Container>
       <Container
@@ -135,15 +135,19 @@ export async function getStaticProps({ params }) {
   await store.dispatch(fetchServicesData());
   const services = await store.getState().appData.services;
   const categories = await store.getState().appData.categories;
-
+  let obj;
   const svcData = services.filter((svc) => {
-    return svc.slug === params.serviceId;
+    if (svc.slug === params.serviceId) {
+      obj = svc;
+      return svc.slug;
+    }
   });
 
   return {
     props: {
       serviceData: svcData,
       categories: categories,
+      name: obj.name,
     },
   };
 }

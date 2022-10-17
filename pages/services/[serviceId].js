@@ -14,7 +14,7 @@ import {
   ListItem,
   Divider,
   Button,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 import { GiTransparentTubes } from "react-icons/gi";
 import { IoIosCalendar } from "react-icons/io";
@@ -24,10 +24,11 @@ import { useRouter } from "next/router";
 import AllServicesPageSection from "../../components/layout/AllServicesPageSection";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 
-const servicePage = ({ serviceData, categories }) => {
+const ServicePage = ({ serviceData, categories }) => {
   const svcData = serviceData[0];
   const [labServiceBulletpoints, setLabServicBulletpoints] = useState([]);
-  const router = useRouter()
+  const [labServiceSmmary, setLabServiceSummary] = useState();
+  const router = useRouter();
 
   const getItemId = () => {
     return Math.random().toString();
@@ -35,6 +36,7 @@ const servicePage = ({ serviceData, categories }) => {
 
   useEffect(() => {
     setLabServicBulletpoints(svcData.bulletpoints);
+    setLabServiceSummary(svcData.summary)
   }, [svcData]);
 
   return (
@@ -50,7 +52,7 @@ const servicePage = ({ serviceData, categories }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{svcData.name}</Heading>
+          <Heading></Heading>
         </Flex>
       </Container>
       <Container
@@ -72,7 +74,7 @@ const servicePage = ({ serviceData, categories }) => {
               </Button>
             </Box>
             <Box mt={5} mb={10} fontSize={"lg"}>
-              {svcData.summary}
+              {labServiceSmmary}
             </Box>
             <Divider />
             <Text as="h1" fontWeight={700} fontSize={"xx-large"} mt={10} mb={5}>
@@ -135,17 +137,21 @@ export async function getStaticProps({ params }) {
   await store.dispatch(fetchServicesData());
   const services = await store.getState().appData.services;
   const categories = await store.getState().appData.categories;
-
+  let obj;
   const svcData = services.filter((svc) => {
-    return svc.slug === params.serviceId;
+    if (svc.slug === params.serviceId) {
+      obj = svc;
+      return svc.slug;
+    }
   });
 
   return {
     props: {
       serviceData: svcData,
       categories: categories,
+      // name: obj.name,
     },
   };
 }
 
-export default servicePage;
+export default ServicePage;

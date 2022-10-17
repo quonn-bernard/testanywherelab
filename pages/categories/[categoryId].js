@@ -1,7 +1,5 @@
-import { useEffect } from "next/Router";
 import store from "../../components/store";
 import { fetchServicesData } from "../../components/store/appDataActions";
-import Link from "next/link";
 import {
   Container,
   Text,
@@ -16,7 +14,7 @@ import ServicesListItem from "../../components/ServicesList/ServicesListItem";
 import SideBarCategories from "../../components/layout/SideBarCategories";
 import { customTheme } from "../../theme";
 
-const CategoryPage = ({ serviceData, categories, name }) => {
+const CategoryPage = ({ serviceData, categories }) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -32,7 +30,7 @@ const CategoryPage = ({ serviceData, categories, name }) => {
         backgroundPosition={"center center"}
       >
         <Flex justify={"center"} alignItems={"center"} h="100%">
-          <Heading>{name} Tests</Heading>
+          <Heading> Tests</Heading>
         </Flex>
       </Container>
       <Container w="100%" maxW="100%" padding={"4rem 0"}>
@@ -49,13 +47,13 @@ const CategoryPage = ({ serviceData, categories, name }) => {
           }
         >
           <Text fontSize={"20px"}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
+            {`Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. Lorem Ipsum has been
             the industry's standard dummy text ever since the 1500s, when an
             unknown printer took a galley of type and scrambled it to make a
-            type specimen book.
+            type specimen book.`}
           </Text>
         </Flex>
       </Container>
@@ -71,8 +69,8 @@ const CategoryPage = ({ serviceData, categories, name }) => {
           <SideBarCategories categories={categories} />
           <GridItem order={{ base: 1, lg: 2 }}>
             <Grid gap={2}>
-              {serviceData.map((cat) => {
-                return <ServicesListItem service={cat} />;
+              {serviceData.map((cat, index) => {
+                return <ServicesListItem service={cat} key={index} />;
               })}
             </Grid>
           </GridItem>
@@ -104,15 +102,19 @@ export async function getStaticProps({ params }) {
   await store.dispatch(fetchServicesData());
   const services = await store.getState().appData.services;
   const categories = await store.getState().appData.categories;
+  let obj = {}
 
-  const catKey = categories.filter((cat) => {
+  const catKeys = categories.filter((cat) => {
     if (cat.slug === params.categoryId) {
       return cat;
     }
   });
 
   const svcData = services.filter((svc) => {
-    if (svc.tags.indexOf(catKey[0].name) !== -1) {
+    catKeys.forEach(cat => {
+      obj = cat
+    })
+    if (svc.tags.indexOf(obj.name) !== -1) {
       return svc;
     }
   });
@@ -123,8 +125,8 @@ export async function getStaticProps({ params }) {
       services: services,
       categories: categories,
       serviceData: svcData,
-      catkey: catKey,
-      name: catKey[0].name,
+      catkey: catKeys,
+      // name: obj.name,
       slug: params.categoryId,
     },
   };

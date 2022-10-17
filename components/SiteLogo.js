@@ -16,9 +16,9 @@ const SiteLogo = () => {
       cursor={"pointer"}
     >
       {useColorMode().colorMode === "dark" ? (
-        <Image onClick={() => router.push(`/`)} src={Logo} />
+        <Image alt='Dark theme logo' onClick={() => router.push(`/`)} src={Logo} />
       ) : (
-        <Image onClick={() => router.push(`/`)} src={LogoLight} />
+        <Image alt='Light theme logo' onClick={() => router.push(`/`)} src={LogoLight} />
       )}
     </Flex>
   );

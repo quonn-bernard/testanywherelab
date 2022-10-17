@@ -13,7 +13,7 @@ const HomePage = ({ categories }) => {
 
   useEffect(() => {
     setCategoryList(categories);
-  }, []);
+  }, [categories]);
 
   return (
     <>
@@ -61,9 +61,9 @@ const HomePage = ({ categories }) => {
               Affordable Lab Testing With 24hr Turnaround!
             </Heading>
             <Text as="p" textAlign={{ base: "left", lg: "center" }}>
-              No doctor's referral necessary or insurance necessary! We are a
+              {`No doctor's referral necessary or insurance necessary! We are a
               CLIA certified lab and typically provide lab results in 24hrs or
-              less!
+              less!`}
             </Text>
             <Button onClick={() => router.push(`/services`)}>
               VIEW ALL SERVICES
